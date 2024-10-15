@@ -24,3 +24,9 @@ header {
 .nav a:hover {
   color: #fbff00;
 }
+
+.nav a img {
+  padding: 0;
+  height: 15px;
+  margin-bottom: 5px;
+}
