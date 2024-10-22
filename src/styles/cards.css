@@ -23,6 +23,6 @@
   text-align: justify;
 }
 
-.card span {
-  display: block;
+.card-span-style {
+  color: #2b16e6;
 }
