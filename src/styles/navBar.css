@@ -14,11 +14,18 @@ header {
 
 .nav a {
   color: #f8f9fa;
-  padding: 10px 20px;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+}
+
+.nav a img {
+  transform: translate(0, -2.5px);
+  scale: 0.8;
+}
+
+.nav button img {
+  scale: 0.9;
+  transform: translate(0, 1px);
 }
 
 .nav a:hover {
@@ -27,13 +34,15 @@ header {
 
 header .btn {
   color: #f8f9fa;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
 }
 
 header .btn:hover {
   color: #fbff00;
+}
+
+header button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
