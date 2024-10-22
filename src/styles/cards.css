@@ -1,0 +1,27 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3rem;
+  padding: 0 5vw;
+}
+
+.card {
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+  margin: 0 1em;
+  padding: 1em 0em;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: uppercase;
+}
+
+.card p {
+  padding: 1em;
+  text-align: justify;
+}
+
+.card span {
+}
