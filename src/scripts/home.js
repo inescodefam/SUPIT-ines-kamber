@@ -4,7 +4,7 @@ const homeTitleText = "Budi izvrstan u onom što voliš.";
 
 function createCursor() {
   const cursorElement = document.createElement("span");
-  cursorElement.classList.add("text-cursor");
+  cursorElement.classList.add("text-cursor", "blink-animation");
 
   return cursorElement;
 }
