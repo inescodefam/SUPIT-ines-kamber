@@ -19,6 +19,11 @@ header {
   padding: 0.5em;
 }
 
+.nav a:hover {
+  color: #eac452;
+}
+
+/* Ikonice */
 .nav a img {
   transform: translate(0, -2.5px);
   scale: 0.8;
@@ -29,10 +34,7 @@ header {
   transform: translate(0, 1px);
 }
 
-.nav a:hover {
-  color: #eac452;
-}
-
+/* Gumb za kontakte */
 header .btn {
   color: #f8f9fa;
   border: none;
@@ -49,7 +51,12 @@ header button div {
 }
 
 /* Dodatna navigacija na O nama stanici */
-#about-us-nav {
+#about-us-nav a {
   display: flex;
   align-items: center;
+  color: #eac452;
+}
+
+#about-us-nav a:hover {
+  color: yellow;
 }

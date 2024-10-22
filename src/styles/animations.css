@@ -11,3 +11,34 @@
 .blink-animation {
   animation: blink 1s step-end infinite;
 }
+
+@keyframes slide-nav-bar {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-animation {
+  animation: slide-nav-bar 2s ease;
+}
+
+@keyframes bannerSlideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banner-slide-in {
+  animation: bannerSlideIn 1.5s ease;
+  z-index: -1;
+}
