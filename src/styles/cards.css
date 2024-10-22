@@ -26,3 +26,7 @@
 .card-span-style {
   color: #2b16e6;
 }
+
+.card-four-col {
+  grid-template-columns: repeat(4, 1fr);
+}
