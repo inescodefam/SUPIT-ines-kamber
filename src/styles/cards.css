@@ -41,3 +41,11 @@
   border-bottom: 1px solid #e0e0e0;
   text-transform: uppercase;
 }
+
+.card-four-col img {
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+  height: auto;
+  padding: 1em;
+}
