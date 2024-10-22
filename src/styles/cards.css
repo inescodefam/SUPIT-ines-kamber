@@ -50,3 +50,18 @@
   padding: 1em;
   transform: translateX(50%);
 }
+
+.card-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 3rem;
+  padding: 0 5vw;
+}
+
+.flex-in-cell-of-two-col-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
