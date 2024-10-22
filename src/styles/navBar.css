@@ -10,6 +10,7 @@ header {
   display: flex;
   justify-content: left;
   align-items: left;
+  z-index: 100;
 }
 
 .nav a {
