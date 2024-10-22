@@ -16,6 +16,7 @@ header {
   color: #f8f9fa;
   text-decoration: none;
   transition: color 0.3s ease;
+  padding: 0.5em;
 }
 
 .nav a img {
@@ -29,7 +30,7 @@ header {
 }
 
 .nav a:hover {
-  color: #fbff00;
+  color: #eac452;
 }
 
 header .btn {
@@ -38,7 +39,7 @@ header .btn {
 }
 
 header .btn:hover {
-  color: #fbff00;
+  color: #eac452;
 }
 
 header button div {
