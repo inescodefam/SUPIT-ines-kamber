@@ -24,4 +24,5 @@
 }
 
 .card span {
+  display: block;
 }
