@@ -21,6 +21,9 @@ function animateTitle() {
       homeTitleElement.insertBefore(span, cursorElement);
     }, index * LETTER_APPEARANCE_DELAY);
   });
+  setTimeout(() => {
+    cursorElement.remove();
+  }, homeTitleText.length * LETTER_APPEARANCE_DELAY);
 }
 
 function animateSubtitle() {
