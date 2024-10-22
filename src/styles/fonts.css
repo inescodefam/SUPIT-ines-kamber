@@ -10,3 +10,18 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.footer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-red-text {
+  color: rgb(220, 20, 60);
+}

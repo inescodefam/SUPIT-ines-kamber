@@ -55,8 +55,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin: 3rem;
-  padding: 0 15vw;
+  padding: 3em 15vw;
 }
 
 .flex-in-cell-of-two-col-grid {
@@ -64,5 +63,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  margin: 1em 1em;
+  margin: 0.25em 1em;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+  border-radius: 3px;
+}
+
+iframe {
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0f0d0d;
 }

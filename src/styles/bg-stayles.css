@@ -2,10 +2,17 @@
   background-color: #f3f0f0;
 }
 
-.bg-image-find-us {
-  background-image: url(../../public/assets/kakoDoNas.jpg);
+.bg-img {
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  object-position: center -20%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.find-us {
+  background-image: url(../../public/assets/kakoDoNas.jpg);
+}
+.footer {
+  background-image: url(../../public/assets/zaiskri-bg.jpg);
+  height: 50vh;
 }
