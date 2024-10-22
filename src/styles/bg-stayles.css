@@ -1,3 +1,11 @@
 .antique-bg {
   background-color: #f3f0f0;
 }
+
+.bg-image-find-us {
+  background-image: url(../../public/assets/kakoDoNas.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  object-position: center -20%;
+}
