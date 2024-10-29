@@ -29,13 +29,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.7em;
-  text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: #fff;
   font-weight: bold;
   text-shadow: black 0px 0px 10px;
 }
 
+.center span {
+  color: yellow;
+}
+
 #image-container {
   position: relative;
+  width: 100%;
 }
