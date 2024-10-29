@@ -15,7 +15,11 @@
     <title>SUPIT</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./public/assets/favico.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="./../../public/assets/favico.ico"
+      type="image/x-icon"
+    />
 
     <!--Bootstrap linkovi-->
     <link
@@ -31,11 +35,12 @@
     ></script>
 
     <!-- linkovi na stylesheet-->
-    <link rel="stylesheet" href="./src/styles/navBar.css" />
-    <link rel="stylesheet" href="./src/styles/fonts.css" />
-    <link rel="stylesheet" href="./src/styles/modal.css" />
-    <link rel="stylesheet" href="../../styles/text-style.css" />
-    <link rel="stylesheet" href="../../styles/bg-stayles.css" />
+    <link rel="stylesheet" href="./../styles/navBar.css" />
+    <link rel="stylesheet" href="./../styles/fonts.css" />
+    <link rel="stylesheet" href="./../styles/modal.css" />
+    <link rel="stylesheet" href="./../styles/text-style.css" />
+    <link rel="stylesheet" href="./../styles/bg-stayles.css" />
+    <link rel="stylesheet" href="./../styles/forms.css" />
 
     <!--Google fontovi-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,22 +57,22 @@
           <a href="./login.html"
             >Prijavi se
             <img
-              src="./public/assets/login_icon.svg"
+              src="./../../public/assets/login_icon.svg"
               alt="Prijavi se"
               class="nav-icon"
             />
           </a>
           <a href="#">
             <img
-              src="./public/assets/home_icon.svg"
+              src="./../../public/assets/home_icon.svg"
               alt="Početna"
               class="nav-icon"
             />
             Početna</a
           >
-          <a href="./src/sites/about/about.html">
+          <a href="./about.html">
             <img
-              src="./public/assets/about_icon.svg"
+              src="./../../public/assets/about_icon.svg"
               alt="O nama"
               class="nav-icon"
             />
@@ -75,7 +80,7 @@
           >
           <a href="/news">
             <img
-              src="./public/assets/info_icon.svg"
+              src="./../../public/assets/info_icon.svg"
               alt="Novosti"
               class="nav-icon"
             />
@@ -89,7 +94,7 @@
           >
             <div>
               <img
-                src="./public/assets/contact_us_icon.svg"
+                src="./../../public/assets/contact_us_icon.svg"
                 alt="Kontaktiraj nas"
               />
               Kontakti
@@ -111,7 +116,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <img
-                src="./public/assets/contact-us-modal-icon.svg"
+                src="./../../public/assets/contact-us-modal-icon.svg"
                 alt="Kontaktiraj nas"
               />
               <h1 class="modal-title fs-2" id="staticBackdropLabel">
@@ -212,6 +217,86 @@
         </div>
       </div>
     </header>
+
+    <!-- Forma -->
+    <div class="container">
+      <form id="loginForm">
+        <div class="form-group barlow-condensed-regular">
+          <h1 id="form-title">Prijava korisnika</h1>
+          <label for="username">Korisničko ime</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            aria-describedby="emailHelp"
+            placeholder="Korisničko ime"
+            name="username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Lozinka</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Lozinka"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg col-12">
+          Prijavi se
+        </button>
+        <div
+          id="error-message"
+          class="error-message"
+          style="display: none; color: red; margin-top: 10px"
+        >
+          <small> Korisnik nije pronađen. </small>
+        </div>
+      </form>
+    </div>
+
+    <!-- Logika za login -->
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+          };
+
+          fetch("https://www.fulek.com/data/api/user/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => {
+              if (response.status === 404) {
+                return response.json().then((data) => {
+                  if (data.isSuccess === false) {
+                    throw new Error("Invalid username or password");
+                  }
+                });
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById("error-message").style.display = "block";
+            });
+        });
+    </script>
   </body>
 
   <footer>

@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 400px;
+  margin: 6em auto;
+}
+
+.footer {
+  bottom: 0;
+  position: fixed;
+}
+
+#form-title {
+  text-transform: uppercase;
+}
+
+form div {
+  margin: 2em auto;
+}
