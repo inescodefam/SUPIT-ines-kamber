@@ -6,11 +6,12 @@
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   position: relative;
 }
 .find-us {
   background-image: url(../../public/assets/kakoDoNas.jpg);
+  height: 160vh;
 }
 .footer {
   background-image: url(../../public/assets/zaiskri-bg.jpg);

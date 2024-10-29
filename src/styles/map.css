@@ -1,7 +1,24 @@
 .map {
-  bottom: 2%;
-  transform: translate(28%, 0%);
+  display: flex;
   position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
   justify-content: center;
   align-items: center;
+  width: 80%; /* Set a default width */
+  max-width: 1600px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .map {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .map {
+    width: 100%; /* Adjust width for very small screens */
+  }
 }
