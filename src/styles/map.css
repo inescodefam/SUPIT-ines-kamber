@@ -1,0 +1,7 @@
+.map {
+  bottom: 2%;
+  transform: translate(28%, 0%);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
