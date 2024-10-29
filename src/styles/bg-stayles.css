@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: max-content;
+  height: 100vh;
   position: relative;
 }
 .find-us {
@@ -16,4 +16,13 @@
 .footer {
   background-image: url(../../public/assets/zaiskri-bg.jpg);
   height: 40vh;
+}
+
+@media screen and (max-width: 768px) {
+  .find-us {
+    height: 200vh;
+  }
+  .footer {
+    height: 30vh;
+  }
 }

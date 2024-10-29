@@ -13,11 +13,14 @@
 
 .footer-text {
   display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(0%, 0%);
-  font-size: 3rem;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
   color: aliceblue;
   text-transform: uppercase;
   text-align: center;
@@ -27,4 +30,10 @@
 
 .footer-red-text {
   color: rgb(220, 20, 60);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-text {
+    font-size: 2rem;
+  }
 }
