@@ -3,9 +3,9 @@
 }
 
 .row img {
+  border-radius: 50%;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   border: 20px solid rgb(195, 199, 191);
   object-fit: cover;
   object-position: 60%;
@@ -19,4 +19,5 @@
 
 .antique-bg {
   margin: 3em 0em;
+  height: auto;
 }
