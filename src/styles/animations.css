@@ -44,7 +44,7 @@
 }
 
 .grow-animation {
-  animation: grow 1s ease;
+  animation: grow 0.5s ease;
 }
 
 @keyframes grow {
