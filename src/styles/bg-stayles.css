@@ -11,11 +11,11 @@
 }
 .find-us {
   background-image: url(../../public/assets/kakoDoNas.jpg);
-  height: 160vh;
+  height: 110vh;
 }
 .footer {
   background-image: url(../../public/assets/zaiskri-bg.jpg);
-  height: 40vh;
+  height: 20vh;
 }
 
 @media screen and (max-width: 768px) {
