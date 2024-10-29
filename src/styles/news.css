@@ -6,7 +6,8 @@
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  border: 20px solid rgb(195, 199, 191);
+  border: 20px solid #f3f0f0;
+  box-shadow: black 0px 0px 10px;
   object-fit: cover;
   object-position: 60%;
 }
