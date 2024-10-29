@@ -13,3 +13,10 @@
   margin: 0 15vw;
   padding: 2em;
 }
+
+@media screen and (max-width: 768px) {
+  .text-style {
+    font-size: 1.5em;
+    margin: 0 3vw;
+  }
+}

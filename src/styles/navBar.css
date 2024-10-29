@@ -60,3 +60,30 @@ header button div {
 #about-us-nav a:hover {
   color: yellow;
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .nav a {
+    padding: 0.5em 0.2em;
+  }
+
+  .nav a img {
+    scale: 0.7;
+  }
+
+  .nav button img {
+    scale: 0.8;
+  }
+
+  header .btn {
+    padding: 0.5em 0em;
+  }
+
+  #about-us-nav a {
+    padding: 0.5em 0.5em;
+  }
+}

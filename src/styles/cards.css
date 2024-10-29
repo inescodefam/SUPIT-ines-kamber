@@ -99,13 +99,20 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     margin: 3rem;
-    padding: 0 5vw;
+  }
+
+  .card-four-col img {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    height: auto;
+    margin: auto;
+    transform: translateX(0%);
   }
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     margin: 3rem;
-    padding: 0 5vw;
   }
 }
