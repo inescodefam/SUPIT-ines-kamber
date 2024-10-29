@@ -1,0 +1,22 @@
+.row a {
+  margin: 3em;
+}
+
+.row img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 20px solid rgb(195, 199, 191);
+  object-fit: cover;
+  object-position: 60%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+}
+
+.antique-bg {
+  margin: 3em 0em;
+}
