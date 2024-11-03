@@ -1,13 +1,26 @@
 const API_URL = "https://www.fulek.com/data/api/user/";
+const USER_LOCAL_STORAGE_KEY = "user";
 
 const redirectToHomePage = () => (window.location.pathname = "/index.html");
 
 function saveUserToLocalStorage(token, username) {
-  localStorage.setItem("user", JSON.stringify({ token, username }));
+  localStorage.setItem(
+    USER_LOCAL_STORAGE_KEY,
+    JSON.stringify({ token, username })
+  );
 }
 
 function getUserFromLocalStorage() {
-  return JSON.parse(localStorage.getItem("user"));
+  return JSON.parse(localStorage.getItem(USER_LOCAL_STORAGE_KEY));
+}
+
+function removeUserFromLocalStorage() {
+  localStorage.removeItem(USER_LOCAL_STORAGE_KEY);
+}
+
+function logout() {
+  removeUserFromLocalStorage();
+  redirectToHomePage();
 }
 
 function handleError(error) {
@@ -88,15 +101,18 @@ function addEventListenerToForm(elementId, submitHandler) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (getUserFromLocalStorage()) {
+  const isLoginPage = window.location.pathname.endsWith("login.html");
+  const isRegisterPage = window.location.pathname.endsWith("register.html");
+
+  if ((isLoginPage || isRegisterPage) && getUserFromLocalStorage()) {
     redirectToHomePage();
     return;
   }
-  if (window.location.pathname.endsWith("login.html")) {
+  if (isLoginPage) {
     addEventListenerToForm("login-form", handleLoginSubmit);
     return;
   }
-  if (window.location.pathname.endsWith("register.html")) {
+  if (isRegisterPage) {
     addEventListenerToForm("register-form", handleRegisterSubmit);
     return;
   }
