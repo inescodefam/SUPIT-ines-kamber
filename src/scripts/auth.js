@@ -32,9 +32,18 @@ function handleSubmit(event) {
 }
 
 function addEventListenerToLoginForm() {
-  document.getElementById("loginForm").addEventListener("submit", handleSubmit);
+  document
+    .getElementById("login-form")
+    .addEventListener("submit", handleSubmit);
+}
+
+function addEventListenerToRegisterForm() {
+  document
+    .getElementById("register-form")
+    .addEventListener("submit", handleSubmit);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   addEventListenerToLoginForm();
+  addEventListenerToRegisterForm();
 });

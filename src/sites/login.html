@@ -51,7 +51,7 @@
     />
 
     <!-- Skripte poslovna logika -->
-    <script src="./../scripts/login.js" defer></script>
+    <script src="./../scripts/auth.js" defer></script>
   </head>
   <body>
     <header>
@@ -223,7 +223,7 @@
 
     <!-- Forma -->
     <div class="container barlow-condensed-regular">
-      <form id="loginForm">
+      <form id="login-form">
         <h1 id="form-title">Prijava korisnika</h1>
         <div class="form-group">
           <label for="username">Korisničko ime</label>
@@ -231,7 +231,6 @@
             type="text"
             class="form-control"
             id="username"
-            aria-describedby="emailHelp"
             placeholder="Korisničko ime"
             name="username"
             required
