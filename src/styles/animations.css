@@ -55,3 +55,16 @@
     transform: scale(1);
   }
 }
+
+.appear-animation {
+  animation: appear 1s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -49,6 +49,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Skripte poslovna logika -->
+    <script src="./../scripts/login.js" defer></script>
   </head>
   <body>
     <header>
@@ -257,46 +260,6 @@
         </div>
       </form>
     </div>
-
-    <!-- Logika za login -->
-
-    <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const formData = {
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value,
-          };
-
-          fetch("https://www.fulek.com/data/api/user/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          })
-            .then((response) => {
-              if (response.status === 404) {
-                return response.json().then((data) => {
-                  if (data.isSuccess === false) {
-                    throw new Error("Invalid username or password");
-                  }
-                });
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log("Success:", data);
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              document.getElementById("error-message").style.display = "block";
-            });
-        });
-    </script>
   </body>
 
   <footer>
