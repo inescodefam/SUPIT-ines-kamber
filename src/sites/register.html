@@ -51,7 +51,7 @@
     />
 
     <!-- Skripte poslovna logika -->
-    <script src="./../scripts/login.js" defer></script>
+    <script src="./../scripts/register.js" defer></script>
   </head>
   <body>
     <header>
@@ -223,7 +223,7 @@
 
     <!-- Forma -->
     <div class="container barlow-condensed-regular">
-      <form id="loginForm">
+      <form id="register-form">
         <h1 id="form-title">Registracija korisnika</h1>
         <div class="form-group">
           <label for="username">Korisničko ime</label>
@@ -251,6 +251,11 @@
         <button type="submit" class="btn btn-secondary btn-lg col-12">
           Registriraj se
         </button>
+        <div
+          id="error-message"
+          class="error-message"
+          style="display: none; color: red; margin-top: 10px"
+        ></div>
       </form>
     </div>
   </body>

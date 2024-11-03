@@ -1,6 +1,7 @@
 function handleError(error) {
-  document.getElementById("error-message").style.display = "block";
-  document.getElementById("error-message").innerText = error;
+  const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.style.display = "block";
+  errorMessageElement.innerText = error;
 }
 
 function handleSubmit(event) {
