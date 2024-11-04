@@ -61,11 +61,14 @@ document.addEventListener("DOMContentLoaded", async function () {
   subjectForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const subjectInputValue = document.getElementById("subject-input")?.value;
+    const subjectInput = document.getElementById("subject-input");
+    const subjectInputValue = subjectInput?.value;
 
     const selectedSubject = subjects.find(
       (subject) => subject.kolegij === subjectInputValue
     );
     displaySubjectDetailsInTable(selectedSubject);
+    subjectInput.value = "";
+    subjectForm.reset();
   });
 });
