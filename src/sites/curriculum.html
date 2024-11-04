@@ -240,7 +240,7 @@
         class="row barlow-condensed-regular d-flex justify-content-center align-items-center mt-3"
       >
         <div class="col-lg-4">
-          <form id="subject-input">
+          <form id="subject-form">
             <div class="mb-3">
               <label for="subject-input" class="form-label"
                 >Naziv kolegija:</label
@@ -258,7 +258,10 @@
         </div>
 
         <div class="col-lg-4">
-          <table class="table table-stried table-hover">
+          <table
+            class="table table-stried table-hover"
+            id="subject-details-table"
+          >
             <thead>
               <tr>
                 <th scope="col">Kolegij</th>
@@ -270,16 +273,7 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Math</th>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
             <tfoot>
               <tr>
                 <th scope="col">Ukupno</th>
