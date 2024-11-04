@@ -33,9 +33,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="src/scripts/home.js"></script>
-    <script src="src/scripts/auth.js"></script>
-    <script src="src/scripts/private-route.js"></script>
+    <script src="./../scripts/auth.js"></script>
+    <script src="./../scripts/private-route.js"></script>
 
     <!-- linkovi na stylesheet-->
     <link rel="stylesheet" href="./../styles/navBar.css" />
@@ -61,7 +60,7 @@
             <span id="login-text"> Prijavi se </span>
             <span id="username" class="text-primary ms-1"></span>
             <img
-              src="./../../public/assets/login_icon.svg"
+              src="../../public/assets/login_icon.svg"
               alt="Prijavi se"
               class="nav-icon"
               id="login-icon"
@@ -129,7 +128,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <img
-                src="./public/assets/contact-us-modal-icon.svg"
+                src="./../../public/assets/contact-us-modal-icon.svg"
                 alt="Kontaktiraj nas"
               />
               <h1 class="modal-title fs-2" id="staticBackdropLabel">
@@ -230,5 +229,14 @@
         </div>
       </div>
     </header>
+
+    <div class="barlow-condensed-regular text-style title">
+      <h1>Nastavni plan</h1>
+    </div>
+
+    <form action="">
+      <label for="subject-input">Naziv kolegija:</label>
+      <input type="text" id="subject-input" />
+    </form>
   </body>
 </html>

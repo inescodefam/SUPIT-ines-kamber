@@ -7,7 +7,10 @@ function updateLoginLink() {
   if (loginText && loginIcon && getUserFromLocalStorage()) {
     loginText.innerText = "Odjavi se";
     username.innerText = getUsernameFromLocalStorage();
-    loginIcon.src = "./public/assets/logout.svg";
+    loginIcon.src =
+      window.location.href === "/index.html"
+        ? "./public/assets/logout.svg"
+        : "../../public/assets/logout.svg";
   }
 
   loginLink?.addEventListener("click", logout);
