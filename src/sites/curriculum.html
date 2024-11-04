@@ -37,12 +37,13 @@
     <script src="./../scripts/private-route.js"></script>
 
     <!-- linkovi na stylesheet-->
-    <link rel="stylesheet" href="./../styles/navBar.css" />
-    <link rel="stylesheet" href="./../styles/fonts.css" />
-    <link rel="stylesheet" href="./../styles/animations.css" />
-    <link rel="stylesheet" href="./../styles/modal.css" />
-    <link rel="stylesheet" href="./../styles/text-style.css" />
-    <link rel="stylesheet" href="./../styles/bg-stayles.css" />
+    <link rel="stylesheet" href="../styles/navBar.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/forms.css" />
+    <link rel="stylesheet" href="../styles/animations.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" href="../styles/text-style.css" />
+    <link rel="stylesheet" href="../styles/bg-stayles.css" />
 
     <!--Google fontovi-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -234,16 +235,79 @@
       <h1>Nastavni plan</h1>
     </div>
 
-    <form action="">
-      <div class="mb-3">
-        <label for="subject-input" class="form-label">Naziv kolegija:</label>
-        <input
-          type="text"
-          id="subject-input"
-          class="form-control"
-          placeholder="Upišite predmet"
-        />
+    <div
+      class="row barlow-condensed-regular d-flex justify-content-center align-items-center mt-3"
+    >
+      <div class="col-lg-4">
+        <form
+          action="https://www.fulek.com/data/api/supit/curriculum-list/hr"
+          method="get"
+        >
+          <div class="mb-3">
+            <label for="subject-input" class="form-label"
+              >Naziv kolegija:</label
+            >
+            <input
+              type="text"
+              id="subject-input"
+              class="form-control"
+              placeholder="Upišite predmet"
+              list="datalistOptions"
+            />
+            <datalist id="datalistOptions">
+              <option value="San Francisco"></option>
+              <option value="New York"></option>
+              <option value="Seattle"></option>
+              <option value="Los Angeles"></option>
+              <option value="Chicago"></option>
+            </datalist>
+          </div>
+        </form>
       </div>
-    </form>
+
+      <div class="col-lg-4">
+        <table class="table table-stried table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Kolegij</th>
+              <th scope="col">ECTS</th>
+              <th scope="col">Sati</th>
+              <th scope="col">Predavanja</th>
+              <th scope="col">Vježbe</th>
+              <th scope="col">Tip</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Math</th>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="col">Ukupno</th>
+              <th scope="col">suma ECTS</th>
+              <th scope="col">suma sati</th>
+              <th scope="col">suma predavanja</th>
+              <th scope="col">suma vježbe</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div class="position-relative">
+        <div class="footer-text">
+          <div>Budi izvrstan u onom što voliš.</div>
+          <div class="footer-red-text">Zaiskri.</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

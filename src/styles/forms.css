@@ -19,3 +19,8 @@ body {
 .form-group {
   margin: 2em auto;
 }
+
+datalist {
+  color: #fff;
+  width: 100%;
+}

@@ -6,23 +6,22 @@
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 .find-us {
   background-image: url(../../public/assets/kakoDoNas.jpg);
-  height: 110vh;
+  height: 1050px;
 }
-.footer {
+footer {
   background-image: url(../../public/assets/zaiskri-bg.jpg);
-  height: 40vh;
+  height: 250px;
 }
 
 @media screen and (max-width: 768px) {
   .find-us {
     height: 200vh;
   }
-  .footer {
-    height: 30vh;
+  footer {
+    height: 100px;
   }
 }
