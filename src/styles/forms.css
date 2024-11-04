@@ -7,11 +7,6 @@ body {
   margin: 6em auto;
 }
 
-.footer {
-  bottom: 0;
-  position: fixed;
-}
-
 #form-title {
   text-transform: uppercase;
 }
