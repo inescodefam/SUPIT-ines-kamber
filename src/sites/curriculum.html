@@ -33,17 +33,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="src/scripts/home.js"></script>
     <script src="src/scripts/auth.js"></script>
     <script src="src/scripts/private-route.js"></script>
 
     <!-- linkovi na stylesheet-->
     <link rel="stylesheet" href="./../styles/navBar.css" />
     <link rel="stylesheet" href="./../styles/fonts.css" />
+    <link rel="stylesheet" href="./../styles/animations.css" />
     <link rel="stylesheet" href="./../styles/modal.css" />
     <link rel="stylesheet" href="./../styles/text-style.css" />
     <link rel="stylesheet" href="./../styles/bg-stayles.css" />
-    <link rel="stylesheet" href="./../styles/news.css" />
-    <link rel="stylesheet" href="./../styles/animations.css" />
 
     <!--Google fontovi-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,20 +52,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Fancybox CSS -->
-    <link
-      rel="stylesheet"
-      href="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
-    />
-
-    <script src="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-
   <body>
     <header>
       <nav class="nav barlow-condensed-regular">
@@ -96,7 +83,7 @@
             />
             O nama</a
           >
-          <a href="#">
+          <a href="./news.html">
             <img
               src="./../../public/assets/info_icon.svg"
               alt="Novosti"
@@ -104,7 +91,7 @@
             />
             Novosti</a
           >
-          <a href="./curriculum.html" id="curriculum-link">
+          <a href="#" id="curriculum-link">
             <img
               src="./../../public/assets/pending_actions.svg"
               alt="Nastavni plan"
@@ -142,7 +129,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <img
-                src="./../../public/assets/contact-us-modal-icon.svg"
+                src="./public/assets/contact-us-modal-icon.svg"
                 alt="Kontaktiraj nas"
               />
               <h1 class="modal-title fs-2" id="staticBackdropLabel">
@@ -243,77 +230,5 @@
         </div>
       </div>
     </header>
-    <div class="barlow-condensed-regular text-style title">
-      <h1>Novosti</h1>
-    </div>
-    <div class="fancy-gallery">
-      <div class="antique-bg row justify-content-evenly align-items-center">
-        <a
-          href="../../public/assets/novost1.jpg"
-          class="img-fluid col-lg-2 col-sm-12 mx-auto"
-          data-fancybox="images"
-          data-caption="Novosti 1"
-        >
-          <div id="image-container">
-            <img
-              class="grow-animation"
-              src="../../public/assets/novost1.jpg"
-              alt="Novosti 1"
-            />
-            <div class="center appear-animation">
-              <span>28.8.2019.</span>
-              Josip Stanešić 2 je sistemaš svijeta i dobitnika nagrade izvrsnoti
-              na natjecanju WorldSkilss
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="../../public/assets/novost2.jpg"
-          class="img-fluid col-lg-2 col-sm-12 mx-auto"
-          data-fancybox="images"
-          data-caption="Novosti 2"
-        >
-          <div id="image-container" class="flex center">
-            <img
-              class="grow-animation"
-              src="../../public/assets/novost2.jpg"
-              alt="Novosti 2"
-            />
-            <div class="center appear-animation">
-              <span>22.7.2019.</span>
-              Nagrađujemo izvrsnost. Objavljujemo dobitnike stipendijskog
-              natječaja 2018./2019.
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="../../public/assets/novost3.jpg"
-          class="img-fluid col-lg-2 col-sm-12 mx-auto"
-          data-fancybox="images"
-          data-caption="Novosti 3"
-        >
-          <div id="image-container">
-            <img
-              class="grow-animation"
-              src="../../public/assets/novost3.jpg"
-              alt="Novosti 3"
-            />
-            <div class="center appear-animation">
-              <span>18.4.2019.</span>
-              Digitalno Junior ljeto.
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <footer class="bg-img footer">
-      <div class="footer-text">
-        <div>Budi izvrstan u onom što voliš.</div>
-        <div class="footer-red-text">Zaiskri.</div>
-      </div>
-    </footer>
   </body>
 </html>
