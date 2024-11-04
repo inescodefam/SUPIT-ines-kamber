@@ -1,13 +1,31 @@
 function updateLoginLink() {
-  const loginLink = document.getElementById("login-text");
+  const loginText = document.getElementById("login-text");
   const loginIcon = document.getElementById("login-icon");
+  const loginLink = document.getElementById("login-link");
+  const username = document.getElementById("username");
 
-  if (loginLink && loginIcon && getUserFromLocalStorage()) {
-    loginLink.innerText = "Odjavi se";
+  if (loginText && loginIcon && getUserFromLocalStorage()) {
+    loginText.innerText = "Odjavi se";
+    username.innerText = getUsernameFromLocalStorage();
     loginIcon.src = "./public/assets/logout.svg";
   }
+
+  loginLink?.addEventListener("click", logout);
+}
+
+function getUsernameFromLocalStorage() {
+  username = JSON.parse(localStorage.getItem("user")).username;
+  return username;
+}
+
+function toggleCurriculumLink() {
+  const curriculumLink = document.getElementById("curriculum-link");
+
+  if (curriculumLink)
+    curriculumLink.style.display = getUserFromLocalStorage() ? "block" : "none";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   updateLoginLink();
+  toggleCurriculumLink();
 });
