@@ -220,53 +220,56 @@
         </div>
       </div>
     </header>
+    <main>
+      <!-- Forma -->
+      <div class="container barlow-condensed-regular">
+        <form id="login-form">
+          <h1 id="form-title">Prijava korisnika</h1>
+          <div class="form-group">
+            <label for="username">Korisničko ime</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Korisničko ime"
+              name="username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Lozinka</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Lozinka"
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-secondary btn-lg col-12">
+            Prijavi se
+          </button>
+          <div id="error-message" class="text-danger mt-10 display-none"></div>
+        </form>
+        <div
+          id="redirect-message"
+          class="text-success mt-10 display-none"
+        ></div>
 
-    <!-- Forma -->
-    <div class="container barlow-condensed-regular">
-      <form id="login-form">
-        <h1 id="form-title">Prijava korisnika</h1>
-        <div class="form-group">
-          <label for="username">Korisničko ime</label>
-          <input
-            type="text"
-            class="form-control"
-            id="username"
-            placeholder="Korisničko ime"
-            name="username"
-            required
-          />
+        <div class="d-flex gap-1">
+          <p>Nemaš račun?</p>
+          <a href="./register.html">Registriraj se</a>
         </div>
-        <div class="form-group">
-          <label for="password">Lozinka</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="Lozinka"
-            name="password"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-secondary btn-lg col-12">
-          Prijavi se
-        </button>
-        <div id="error-message" class="text-danger mt-10 display-none"></div>
-      </form>
-      <div id="redirect-message" class="text-success mt-10 display-none"></div>
-
-      <div class="d-flex gap-1">
-        <p>Nemaš račun?</p>
-        <a href="./register.html">Registriraj se</a>
       </div>
-    </div>
+    </main>
+    <footer>
+      <div class="position-relative">
+        <div class="footer-text">
+          <div>Budi izvrstan u onom što voliš.</div>
+          <div class="footer-red-text">Zaiskri.</div>
+        </div>
+      </div>
+    </footer>
   </body>
-
-  <footer>
-    <div class="">
-      <div class="footer-text">
-        <div>Budi izvrstan u onom što voliš.</div>
-        <div class="footer-red-text">Zaiskri.</div>
-      </div>
-    </div>
-  </footer>
 </html>
