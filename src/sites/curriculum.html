@@ -33,8 +33,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./../scripts/auth.js"></script>
-    <script src="./../scripts/private-route.js"></script>
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/private-route.js"></script>
+    <script src="../scripts/curriculum.js"></script>
 
     <!-- linkovi na stylesheet-->
     <link rel="stylesheet" href="../styles/navBar.css" />
@@ -239,10 +240,7 @@
         class="row barlow-condensed-regular d-flex justify-content-center align-items-center mt-3"
       >
         <div class="col-lg-4">
-          <form
-            action="https://www.fulek.com/data/api/supit/curriculum-list/hr"
-            method="get"
-          >
+          <form id="subject-input">
             <div class="mb-3">
               <label for="subject-input" class="form-label"
                 >Naziv kolegija:</label
@@ -252,15 +250,9 @@
                 id="subject-input"
                 class="form-control"
                 placeholder="Upišite predmet"
-                list="datalistOptions"
+                list="subjects-datalist"
               />
-              <datalist id="datalistOptions">
-                <option value="San Francisco"></option>
-                <option value="New York"></option>
-                <option value="Seattle"></option>
-                <option value="Los Angeles"></option>
-                <option value="Chicago"></option>
-              </datalist>
+              <datalist id="subjects-datalist"> </datalist>
             </div>
           </form>
         </div>

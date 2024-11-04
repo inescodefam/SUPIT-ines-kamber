@@ -1,4 +1,5 @@
-const API_URL = "https://www.fulek.com/data/api/user/";
+const API_BASE = "https://www.fulek.com/data/api";
+const USER_API = API_BASE + "/user";
 const USER_LOCAL_STORAGE_KEY = "user";
 
 const redirectToHomePage = () => (window.location.pathname = "/index.html");
@@ -52,7 +53,7 @@ function resetErrorMessage() {
 function handleLoginSubmit(event) {
   resetErrorMessage();
   event.preventDefault();
-  fetch(API_URL + "login", {
+  fetch(USER_API + "/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -78,7 +79,7 @@ function handleRegisterSubmit(event) {
   resetErrorMessage();
 
   event.preventDefault();
-  fetch(API_URL + "register", {
+  fetch(USER_API + "/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
