@@ -51,9 +51,12 @@ function displaySubjectDetailsInTable(subject) {
     tableRow.appendChild(tableData);
   });
   subjectDetailsTable.appendChild(tableRow);
+  subjectDetailsTable.setAttribute("class", "visible");
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
+  const subjectDetailsTable = document.getElementById("subject-details-table");
+  subjectDetailsTable.setAttribute("class", "invisible");
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
 
