@@ -32,6 +32,15 @@ function displaySubjects(subjects) {
   });
 }
 
+function deleteSubjectButton(tableRow) {
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete";
+  deleteButton.addEventListener("click", function () {
+    tableRow.remove();
+  });
+  return deleteButton;
+}
+
 function displaySubjectDetailsInTable(subject) {
   const subjectDetailsTable = document.getElementById("subject-details-table");
   const subjectDetailsData = [
@@ -50,13 +59,13 @@ function displaySubjectDetailsInTable(subject) {
     tableData.innerText = columnData;
     tableRow.appendChild(tableData);
   });
+
+  tableRow.appendChild(deleteSubjectButton(tableRow));
   subjectDetailsTable.appendChild(tableRow);
-  subjectDetailsTable.setAttribute("class", "visible");
+  subjectDetailsTable.classList.remove("invisible");
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const subjectDetailsTable = document.getElementById("subject-details-table");
-  subjectDetailsTable.setAttribute("class", "invisible");
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
 
