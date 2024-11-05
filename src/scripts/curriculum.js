@@ -34,11 +34,57 @@ function displaySubjects(subjects) {
 
 function deleteSubjectButton(tableRow) {
   const deleteButton = document.createElement("button");
+  deleteButton.type = "button";
+  deleteButton.classList.add("btn", "btn-danger");
   deleteButton.innerText = "Delete";
   deleteButton.addEventListener("click", function () {
     tableRow.remove();
+    updateSubjectList();
   });
+
   return deleteButton;
+}
+
+function calculateSumOfAllSubjects(subjects, key) {
+  let sum = 0;
+  subjects.forEach((subject) => {
+    sum += subject[key];
+  });
+  return sum;
+}
+
+function displaySumOfAllSubjects(subjectList) {
+  const fields = ["ects", "sati", "predavanja", "vjezbe"];
+  fields.forEach((field) => {
+    document.getElementById(field).innerText = calculateSumOfAllSubjects(
+      subjectList,
+      field
+    );
+  });
+}
+
+function updateSubjectList() {
+  const tableBody = document.querySelector("tbody");
+  if (!tableBody) return;
+
+  const subjectList = [];
+  const subjectRows = tableBody.querySelectorAll("tr");
+  subjectRows.forEach((subjectRow) => {
+    const subject = {
+      kolegij: subjectRow.children[0].innerText,
+      ects: parseInt(subjectRow.children[1].innerText),
+      sati: parseInt(subjectRow.children[2].innerText),
+      predavanja: parseInt(subjectRow.children[3].innerText),
+      vjezbe: parseInt(subjectRow.children[4].innerText),
+    };
+    subjectList.push(subject);
+  });
+
+  displaySumOfAllSubjects(subjectList);
+
+  if (subjectList.length === 0) {
+    document.getElementById("subject-details-table").classList.add("invisible");
+  }
 }
 
 function displaySubjectDetailsInTable(subject) {
@@ -52,6 +98,7 @@ function displaySubjectDetailsInTable(subject) {
     subject.tip,
   ];
 
+  const tableBody = subjectDetailsTable.querySelector("tbody");
   const tableRow = document.createElement("tr");
 
   subjectDetailsData.forEach((columnData) => {
@@ -59,10 +106,11 @@ function displaySubjectDetailsInTable(subject) {
     tableData.innerText = columnData;
     tableRow.appendChild(tableData);
   });
-
   tableRow.appendChild(deleteSubjectButton(tableRow));
-  subjectDetailsTable.appendChild(tableRow);
+  tableBody.appendChild(tableRow);
+
   subjectDetailsTable.classList.remove("invisible");
+  updateSubjectList();
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -80,6 +128,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       (subject) => subject.kolegij === subjectInputValue
     );
     displaySubjectDetailsInTable(selectedSubject);
+
     subjectInput.value = "";
     subjectForm.reset();
   });

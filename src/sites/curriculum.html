@@ -258,12 +258,9 @@
         </div>
 
         <div class="col-lg-5">
-          <table
-            id="subject-details-table"
-            class="table table-stried table-hover invisible"
-          >
+          <table id="subject-details-table" class="table table-hover invisible">
             <thead>
-              <tr>
+              <tr class="border-0">
                 <th scope="col">Kolegij</th>
                 <th scope="col">ECTS</th>
                 <th scope="col">Sati</th>
@@ -276,11 +273,11 @@
             <tbody></tbody>
             <tfoot>
               <tr>
-                <th scope="col">Ukupno</th>
-                <th scope="col">suma ECTS</th>
-                <th scope="col">suma sati</th>
-                <th scope="col">sum pred</th>
-                <th scope="col">suma vjež</th>
+                <th scope="col" class="text-end">Ukupno</th>
+                <th scope="col" id="ects"></th>
+                <th scope="col" id="sati"></th>
+                <th scope="col" id="predavanja"></th>
+                <th scope="col" id="vjezbe"></th>
               </tr>
             </tfoot>
           </table>
