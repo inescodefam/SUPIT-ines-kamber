@@ -12,9 +12,9 @@
 }
 footer {
   background-image: url(../../public/assets/zaiskri-bg.jpg);
+  height: 120px;
+  background-size: cover;
   object-fit: cover;
-  object-position: center center;
-  height: 250px;
 }
 
 @media screen and (max-width: 768px) {
