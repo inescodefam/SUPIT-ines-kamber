@@ -1,20 +1,16 @@
-#image-container img {
+.container-fluid img {
   border-radius: 50%;
   width: 300px;
   height: 300px;
   border: 10px solid #f3f0f0;
-  box-shadow: black 0px 0px 10px;
+  box-shadow: rgb(78, 78, 78) 0px 0px 10px;
   object-fit: cover;
   object-position: 60%;
 }
 
 .antique-bg {
   margin: 3em 0em;
-  height: 400px;
-}
-
-#image-container {
-  position: relative;
+  height: 700px;
 }
 
 .center {
@@ -33,4 +29,13 @@
 
 .center span {
   color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .antique-bg {
+    height: 1700px;
+  }
+  .center {
+    font-size: 1em;
+  }
 }
