@@ -21,6 +21,16 @@ async function getAllSubjects() {
   }
 }
 
+function findSubjectInTable(subjectName) {
+  const tableBody = document.querySelector("tbody");
+  if (!tableBody) return false;
+
+  const tableRows = tableBody.querySelectorAll("tr");
+  return Array.from(tableRows).some(
+    (tableRow) => tableRow.children[0].innerText === subjectName
+  );
+}
+
 function displaySubjects(subjects) {
   const subjectsDatalist = document.getElementById("subjects-datalist");
 
@@ -28,7 +38,10 @@ function displaySubjects(subjects) {
     const option = document.createElement("option");
     option.value = subject.kolegij;
     option.id = subject.id;
-    subjectsDatalist.appendChild(option);
+
+    findSubjectInTable(subject.kolegij)
+      ? subjectsDatalist.children[0].remove()
+      : subjectsDatalist.appendChild(option);
   });
 }
 
@@ -87,38 +100,42 @@ function updateSubjectList() {
 }
 
 function displaySubjectDetailsInTable(subject) {
-  const subjectDetailsTable = document.getElementById("subject-details-table");
-  const subjectDetailsData = [
-    subject.kolegij,
-    subject.ects,
-    subject.sati,
-    subject.predavanja,
-    subject.vjezbe,
-    subject.tip,
-  ];
+  if (!findSubjectInTable(subject.kolegij)) {
+    const subjectDetailsTable = document.getElementById(
+      "subject-details-table"
+    );
+    const subjectDetailsData = [
+      subject.kolegij,
+      subject.ects,
+      subject.sati,
+      subject.predavanja,
+      subject.vjezbe,
+      subject.tip,
+    ];
 
-  const tableBody = subjectDetailsTable.querySelector("tbody");
-  const tableRow = document.createElement("tr");
+    const tableBody = subjectDetailsTable.querySelector("tbody");
+    const tableRow = document.createElement("tr");
 
-  subjectDetailsData.forEach((columnData) => {
-    const tableData = document.createElement("td");
-    tableData.innerText = columnData;
-    tableRow.appendChild(tableData);
-  });
-  tableRow.appendChild(deleteSubjectButton(tableRow));
-  tableBody.appendChild(tableRow);
+    subjectDetailsData.forEach((columnData) => {
+      const tableData = document.createElement("td");
+      tableData.innerText = columnData;
+      tableRow.appendChild(tableData);
+    });
+    tableRow.appendChild(deleteSubjectButton(tableRow));
+    tableBody.appendChild(tableRow);
 
-  subjectDetailsTable.classList.remove("invisible");
-  updateSubjectList();
+    subjectDetailsTable.classList.remove("invisible");
+    updateSubjectList();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
   const subjects = await getAllSubjects();
-  displaySubjects(subjects);
 
   const subjectForm = document.getElementById("subject-form");
   subjectForm.addEventListener("submit", async function (event) {
     event.preventDefault();
+    displaySubjects(subjects);
 
     const subjectInput = document.getElementById("subject-input");
     const subjectInputValue = subjectInput?.value;
@@ -126,6 +143,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const selectedSubject = subjects.find(
       (subject) => subject.kolegij === subjectInputValue
     );
+
     displaySubjectDetailsInTable(selectedSubject);
 
     subjectInput.value = "";
