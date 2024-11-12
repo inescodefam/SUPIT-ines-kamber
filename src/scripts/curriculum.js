@@ -30,6 +30,23 @@ function displaySubjects(subjects) {
     option.id = subject.id;
     subjectsDatalist.appendChild(option);
   });
+
+  const tableBody = document.querySelector("tbody");
+  if (!tableBody) return;
+  /*Filter subjects depending on subjects in table rows*/
+  const subjectRows = tableBody.querySelectorAll("tr");
+
+  subjectRows.forEach((subjectRow) => {
+    const subjectName = subjectRow.children[0].innerText;
+    const subjectOption = subjectsDatalist.querySelector(
+      `option[id="${subjectName}"]`
+    );
+    console.log(subjectName, subjectOption);
+
+    if (subjectOption) {
+      subjectsDatalist.removeChild(subjectOption);
+    }
+  });
 }
 
 function deleteSubjectButton(tableRow) {
