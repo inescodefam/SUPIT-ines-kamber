@@ -33,6 +33,20 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JQuery linkovi-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="/src/plugin/jquery-flexdatalist/jquery.flexdatalist.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="/src/plugin/jquery-flexdatalist/jquery.flexdatalist.min.js"></script>
+
     <script src="../scripts/auth.js"></script>
     <script src="../scripts/private-route.js"></script>
     <script src="../scripts/curriculum.js"></script>
@@ -246,11 +260,12 @@
                 >Naziv kolegija:</label
               >
               <input
+                type="text"
                 id="subject-input"
-                class="form-control"
+                class="form-control flexdatalist"
                 placeholder="Upišite predmet"
+                data-min-length="1"
                 list="subjects-datalist"
-                role="combobox"
                 required
               />
               <datalist id="subjects-datalist" role="listbox"></datalist>

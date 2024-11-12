@@ -131,11 +131,11 @@ function displaySubjectDetailsInTable(subject) {
 
 document.addEventListener("DOMContentLoaded", async function () {
   const subjects = await getAllSubjects();
+  displaySubjects(subjects);
 
   const subjectForm = document.getElementById("subject-form");
   subjectForm.addEventListener("submit", async function (event) {
     event.preventDefault();
-    displaySubjects(subjects);
 
     const subjectInput = document.getElementById("subject-input");
     const subjectInputValue = subjectInput?.value;
@@ -149,4 +149,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     subjectInput.value = "";
     subjectForm.reset();
   });
+});
+
+$(".flexdatalist").flexdatalist({
+  minLength: 1,
 });
