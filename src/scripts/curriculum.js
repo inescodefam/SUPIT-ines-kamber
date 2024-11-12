@@ -35,8 +35,7 @@ function displaySubjects(subjects) {
 function deleteSubjectButton(tableRow) {
   const deleteButton = document.createElement("button");
   deleteButton.type = "button";
-  deleteButton.classList.add("btn", "btn-danger");
-  deleteButton.innerText = "Delete";
+  deleteButton.classList.add("btn", "btn-danger", "btn-close", "mt-1");
   deleteButton.addEventListener("click", function () {
     tableRow.remove();
     updateSubjectList();
