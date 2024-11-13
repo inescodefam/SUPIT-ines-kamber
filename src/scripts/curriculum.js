@@ -133,11 +133,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
 
-  const subjectForm = document.getElementById("subject-form");
+  const subjectInput = document.getElementById("subject-input");
   subjectForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const subjectInput = document.getElementById("subject-input");
     const subjectInputValue = subjectInput?.value;
 
     const selectedSubject = subjects.find(
