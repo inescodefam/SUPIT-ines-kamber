@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   displaySubjects(subjects);
 
   const subjectInput = document.getElementById("subject-input");
-  subjectForm.addEventListener("submit", async function (event) {
+  subjectInput.addEventListener("change", async function (event) {
     event.preventDefault();
 
     const subjectInputValue = subjectInput?.value;
@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     displaySubjectDetailsInTable(selectedSubject);
 
     subjectInput.value = "";
-    subjectForm.reset();
   });
 });
 
