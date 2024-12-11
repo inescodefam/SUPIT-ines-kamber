@@ -1,38 +1,36 @@
 const CURRICULUM_API = API_BASE + "/supit";
 
-async function getAllSubjects() {
+/*  Data  */
+
+function getAllSubjects() {
   const userToken = getUserFromLocalStorage()?.token;
 
   try {
-    const response = await fetch(CURRICULUM_API + "/curriculum-list/hr", {
+    return $.ajax({
+      url: CURRICULUM_API + "/curriculum-list/hr",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${userToken}`,
       },
+      dataType: "json",
+    }).then((response) => {
+      const { isSuccess, data } = response;
+      return isSuccess ? data : [];
     });
-
-    const { isSuccess, data } = await response.json();
-
-    return isSuccess ? data : [];
   } catch (error) {
     console.error(error);
     return [];
   }
 }
 
-function findSubjectInTable(subjectName) {
-  const tableBody = document.querySelector("tbody");
-  if (!tableBody) return false;
-
-  const tableRows = tableBody.querySelectorAll("tr");
-  return Array.from(tableRows).some(
-    (tableRow) => tableRow.children[0].innerText === subjectName
-  );
-}
-
 function displaySubjects(subjects) {
   const subjectsDatalist = document.getElementById("subjects-datalist");
+
+  if (!Array.isArray(subjects)) {
+    console.error("Expected an array but got:", subjects);
+    return;
+  }
 
   subjects.forEach((subject) => {
     const option = document.createElement("option");
@@ -43,6 +41,18 @@ function displaySubjects(subjects) {
       ? subjectsDatalist.children[0].remove()
       : subjectsDatalist.appendChild(option);
   });
+}
+
+/*    Table     */
+
+function findSubjectInTable(subjectName) {
+  const tableBody = document.querySelector("tbody");
+  if (!tableBody) return false;
+
+  const tableRows = tableBody.querySelectorAll("tr");
+  return Array.from(tableRows).some(
+    (tableRow) => tableRow.children[0].innerText === subjectName
+  );
 }
 
 function deleteSubjectButton(tableRow) {
@@ -101,9 +111,7 @@ function updateSubjectList() {
 
 function displaySubjectDetailsInTable(subject) {
   if (!findSubjectInTable(subject.kolegij)) {
-    const subjectDetailsTable = document.getElementById(
-      "subject-details-table"
-    );
+    const subjectDetailsTable = $("#subject-details-table");
     const subjectDetailsData = [
       subject.kolegij,
       subject.ects,
@@ -113,7 +121,7 @@ function displaySubjectDetailsInTable(subject) {
       subject.tip,
     ];
 
-    const tableBody = subjectDetailsTable.querySelector("tbody");
+    const tableBody = subjectDetailsTable.find("tbody");
     const tableRow = document.createElement("tr");
 
     subjectDetailsData.forEach((columnData) => {
@@ -129,26 +137,39 @@ function displaySubjectDetailsInTable(subject) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
+$(document).ready(async function () {
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
-
-  const subjectInput = document.getElementById("subject-input");
-  subjectInput.addEventListener("change", async function (event) {
+  $("#subject-input").on("submit", async function (event) {
     event.preventDefault();
-
-    const subjectInputValue = subjectInput?.value;
-
+    const subjectInputValue = $("#subject-input").val();
     const selectedSubject = subjects.find(
       (subject) => subject.kolegij === subjectInputValue
     );
 
     displaySubjectDetailsInTable(selectedSubject);
-
-    subjectInput.value = "";
+    $("#subject-input").val("");
   });
 });
 
-$(".flexdatalist").flexdatalist({
-  minLength: 1,
-});
+// document.addEventListener("DOMContentLoaded", async function () {
+//   const subjects = await getAllSubjects();
+//   displaySubjects(subjects);
+
+//   // const subjectInput = document.getElementById("subject-input");
+//   // subjectInput.addEventListener("submit", function (event) {
+//   //   event.preventDefault();
+
+//   //   const subjectInputValue = subjectInput?.value;
+
+//   //   const selectedSubject = subjects.find(
+//   //     (subject) => subject.kolegij === subjectInputValue
+//   //   );
+
+//   //   displaySubjectDetailsInTable(selectedSubject);
+//   //   subjectInput.value = "";
+
+//   //   console.log(selectedSubject, "selectedSubject");
+//   //   console.log(subjectInputValue, "subjectInputValue");
+//   // });
+// });
