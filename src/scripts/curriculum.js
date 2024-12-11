@@ -122,17 +122,16 @@ function displaySubjectDetailsInTable(subject) {
     ];
 
     const tableBody = subjectDetailsTable.find("tbody");
-    const tableRow = document.createElement("tr");
+    const tableRow = $("<tr></tr>");
 
     subjectDetailsData.forEach((columnData) => {
-      const tableData = document.createElement("td");
-      tableData.innerText = columnData;
-      tableRow.appendChild(tableData);
+      const tableData = $("<td></td>").text(columnData);
+      tableRow.append(tableData);
     });
-    tableRow.appendChild(deleteSubjectButton(tableRow));
-    tableBody.appendChild(tableRow);
+    tableRow.append(deleteSubjectButton(tableRow));
+    tableBody.append(tableRow);
 
-    subjectDetailsTable.classList.remove("invisible");
+    subjectDetailsTable.removeClass("invisible");
     updateSubjectList();
   }
 }
@@ -140,36 +139,22 @@ function displaySubjectDetailsInTable(subject) {
 $(document).ready(async function () {
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
-  $("#subject-input").on("submit", async function (event) {
-    event.preventDefault();
+
+  $("#subject-input").on("change", function () {
+    handleSubjectSelection();
+  });
+
+  function handleSubjectSelection() {
     const subjectInputValue = $("#subject-input").val();
+
     const selectedSubject = subjects.find(
       (subject) => subject.kolegij === subjectInputValue
     );
 
-    displaySubjectDetailsInTable(selectedSubject);
-    $("#subject-input").val("");
-  });
+    if (selectedSubject) {
+      displaySubjectDetailsInTable(selectedSubject);
+      $("#subject-input").val("");
+      $("#curriculum-form")[0].reset();
+    }
+  }
 });
-
-// document.addEventListener("DOMContentLoaded", async function () {
-//   const subjects = await getAllSubjects();
-//   displaySubjects(subjects);
-
-//   // const subjectInput = document.getElementById("subject-input");
-//   // subjectInput.addEventListener("submit", function (event) {
-//   //   event.preventDefault();
-
-//   //   const subjectInputValue = subjectInput?.value;
-
-//   //   const selectedSubject = subjects.find(
-//   //     (subject) => subject.kolegij === subjectInputValue
-//   //   );
-
-//   //   displaySubjectDetailsInTable(selectedSubject);
-//   //   subjectInput.value = "";
-
-//   //   console.log(selectedSubject, "selectedSubject");
-//   //   console.log(subjectInputValue, "subjectInputValue");
-//   // });
-// });

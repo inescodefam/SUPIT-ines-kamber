@@ -255,10 +255,11 @@
       >
         <div class="col-lg-5 col-sm-8">
           <div class="mb-3">
-            <label for="subject-input" class="form-label"
+            <form id="curriculum-form">
+              <label for="subject-input" class="form-label"
               >Naziv kolegija:</label
-            >
-            <input
+              >
+              <input
               type="text"
               id="subject-input"
               class="form-control flexdatalist"
@@ -266,10 +267,11 @@
               data-min-length="1"
               list="subjects-datalist"
               required
-            />
-            <datalist id="subjects-datalist" role="listbox"></datalist>
+              />
+              <datalist id="subjects-datalist" role="listbox"></datalist>
+            </div>
           </div>
-        </div>
+        </form>
 
         <div class="col-lg-5 col-sm-8">
           <table id="subject-details-table" class="table table-hover invisible">
