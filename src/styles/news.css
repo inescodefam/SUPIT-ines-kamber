@@ -1,3 +1,7 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
 .container-fluid img {
   border-radius: 50%;
   width: 300px;
