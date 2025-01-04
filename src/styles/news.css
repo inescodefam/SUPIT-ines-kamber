@@ -31,6 +31,12 @@
   color: yellow;
 }
 
+.news-text {
+  margin: 5vw 15vw;
+  text-align: center;
+  text-align: justify;
+}
+
 @media screen and (max-width: 768px) {
   .antique-bg {
     height: 1000px;
