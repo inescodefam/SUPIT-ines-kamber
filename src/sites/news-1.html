@@ -46,10 +46,11 @@
     <link rel="stylesheet" href="../styles/animations.css" />
     <link rel="stylesheet" href="../styles/banner.css" />
 
-    <!-- Fancybox CSS -->
+    <!-- Fancybox CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link
       rel="stylesheet"
-      href="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
 
     <!--Google fontovi-->
@@ -148,6 +149,22 @@
           voditelju studija sistemskog inženjerstva Silviju 16.mjestu u vještini
           IT Software Solutions for Business.
         </p>
+      </div>
+      <div>
+        <a data-fancybox="gallery" href="./../../public/assets/galerija1.jpg">
+          <img src="./../../public/assets/galerija1.jpg" />
+        </a>
+
+        <a data-fancybox="gallery" href="./../../public/assets/galerija2.jpg">
+          <img src="./../../public/assets/galerija2.jpg" />
+        </a>
+        <a
+          data-fancybox="gallery"
+          fancybox
+          href="./../../public/assets/worldskills.mp4"
+        >
+          <img src="./../../public/assets/worldskills.mp4" />
+        </a>
       </div>
     </main>
 
@@ -268,5 +285,11 @@
         </div>
       </div>
     </div>
+
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
+    </script>
   </body>
 </html>
