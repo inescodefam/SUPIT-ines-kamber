@@ -23,28 +23,32 @@ footer {
 }
 
 .nav {
+  justify-content: space-between;
   position: sticky;
   top: 0;
+  transition: top 0.3s ease-in-out;
   background-color: var(--black-color);
   padding: 5px;
+}
+
+body.scrolling-up .nav {
+  top: -60px;
+}
+
+.navbar-content {
   display: flex;
   justify-content: space-between;
   z-index: 100;
-  transition: top 0.3s ease-in-out;
 }
 
-body.scrolling-down .nav {
-  top: -100px;
-}
-
-.nav a {
+.navbar-content a {
   color: var(--white-color);
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0.5em;
 }
 
-.nav a:hover {
+.navbar-content a:hover {
   color: var(--apricot-color);
 }
 
@@ -57,17 +61,18 @@ body.scrolling-down .nav {
 }
 
 /* Ikonice */
-.nav a img {
+.navbar-content a img {
   transform: translate(0, -2.5px);
   scale: 0.8;
 }
 
-.nav button img {
+.navbar-content button img {
   scale: 0.9;
   transform: translate(0, 1px);
 }
 
 /* Dodatna navigacija na O nama stanici */
+
 #about-us-nav a {
   display: flex;
   align-items: center;
@@ -80,24 +85,19 @@ body.scrolling-down .nav {
 }
 
 @media screen and (max-width: 768px) {
-  .nav {
-    flex-direction: row;
-    align-items: left;
+  .navbar-content {
+    transform: scale(0.8);
   }
 
-  .nav a {
-    padding: 0.5em 0.2em;
+  .navbar-content a {
+    padding: 8px 4px;
   }
 
-  .nav a img {
+  .navbar-content a img {
     scale: 0.7;
   }
 
-  .nav button img {
-    scale: 0.8;
-  }
-
   #about-us-nav a {
-    padding: 0.5em 0.5em;
+    padding: 8px;
   }
 }
