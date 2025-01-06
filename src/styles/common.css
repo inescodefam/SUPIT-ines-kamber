@@ -23,11 +23,18 @@ footer {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
   background-color: var(--black-color);
   padding: 5px;
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  transition: top 0.3s ease-in-out;
+}
+
+body.scrolling-down .nav {
+  top: -100px;
 }
 
 .nav a {
