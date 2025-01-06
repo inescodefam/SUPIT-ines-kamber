@@ -7,6 +7,11 @@ main {
   height: 100%;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
   margin: 0;
   padding: 0;

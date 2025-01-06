@@ -1,0 +1,53 @@
+:root {
+  --mobile-only: 480px;
+  --tablet-only: 768px;
+  --footer-text-size: 80px;
+  --footer-text-color: rgb(240, 248, 255);
+  --footer-text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  --footer-red-text-color: rgb(220, 20, 60);
+  --typo-news-button-font-size: 16px;
+  --typo-news-button-font-size-mobile: 14px;
+  --button-color-white: rgb(255, 255, 255);
+  --button-shadow: rgb(0, 0, 0) 0px 0px 10px;
+}
+
+.barlow-condensed-regular {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-text {
+  font-size: 80px;
+  color: var(--footer-text-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 0 5px var(--footer-text-shadow);
+}
+
+.footer-red-text {
+  color: var(--footer-red-text-color);
+}
+
+.typo-news-button {
+  font-size: 16px;
+  text-align: center;
+  text-wrap: wrap;
+  color: var(--button-color-white);
+  font-weight: bold;
+  text-shadow: var(--button-shadow);
+}
+
+@media screen and (max-width: var(--mobile-only)) {
+  .typo-news-button {
+    font-size: var(--typo-news-button-font-size-mobile);
+  }
+}

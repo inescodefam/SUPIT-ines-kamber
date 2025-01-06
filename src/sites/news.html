@@ -37,6 +37,7 @@
     <script src="./../scripts/private-route.js"></script>
 
     <!-- linkovi na stylesheet-->
+    <link rel="stylesheet" href="../styles/typography.css" />
     <link rel="stylesheet" href="../styles/common.css" />
     <link rel="stylesheet" href="../styles/fonts.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
@@ -51,12 +52,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-    />
-
-    <!-- Fancybox CSS -->
-    <link
-      rel="stylesheet"
-      href="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
     />
 
     <script src="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
@@ -247,10 +242,8 @@
       <div class="barlow-condensed-regular text-style title">
         <h1>Novosti</h1>
       </div>
-      <div
-        class="fancy-gallery antique-bg d-flex align-items-center justify-content-center"
-      >
-        <div class="row w-100">
+      <div class="antique-bg d-flex align-items-center justify-content-center">
+        <div class="news-wrapper">
           <a
             href="./news-1.html"
             class="col-lg-2 col-sm-12 mx-auto card bg-transparent border-0"
@@ -258,17 +251,15 @@
             data-caption="Novosti 1"
           >
             <div
-              class="container-fluid card-body d-flex justify-content-center"
+              class="container card-body d-flex justify-content-center grow-animation"
             >
-              <img
-                class="grow-animation"
-                src="../../public/assets/novost1.jpg"
-                alt="Novosti 1"
-              />
-              <div class="center appear-animation">
-                <span>28.8.2019.</span>
-                Josip Stanešić 2 je sistemaš svijeta i dobitnika nagrade
-                izvrsnoti na natjecanju WorldSkilss
+              <img src="../../public/assets/novost1.jpg" alt="Novosti 1" />
+              <div class="overlay">
+                <div class="center appear-animation typo-news-button">
+                  <span>28.8.2019.</span>
+                  Student Josip Stanešić 2 je sistemaš svijeta i dobitnika
+                  nagrade izvrsnoti na natjecanju WorldSkilss
+                </div>
               </div>
             </div>
           </a>
@@ -279,18 +270,18 @@
             data-fancybox="images"
             data-caption="Novosti 2"
           >
-            <div
-              class="container-fluid card-body d-flex justify-content-center"
-            >
+            <div class="container card-body d-flex justify-content-center">
               <img
                 class="grow-animation"
                 src="../../public/assets/novost2.jpg"
                 alt="Novosti 2"
               />
-              <div class="center appear-animation">
-                <span>22.7.2019.</span>
-                Nagrađujemo izvrsnost. Objavljujemo dobitnike stipendijskog
-                natječaja 2018./2019.
+              <div class="overlay">
+                <div class="center appear-animation typo-news-button">
+                  <span>22.7.2019.</span>
+                  Nagrađujemo izvrsnost. Objavljujemo dobitnike stipendijskog
+                  natječaja 2018./2019.
+                </div>
               </div>
             </div>
           </a>
@@ -301,17 +292,17 @@
             data-fancybox="images"
             data-caption="Novosti 3"
           >
-            <div
-              class="container-fluid card-body d-flex justify-content-center"
-            >
+            <div class="container card-body d-flex justify-content-center">
               <img
                 class="grow-animation"
                 src="../../public/assets/novost3.jpg"
                 alt="Novosti 3"
               />
-              <div class="center appear-animation">
-                <span>18.4.2019.</span>
-                Digitalno Junior ljeto.
+              <div class="overlay">
+                <div class="center appear-animation typo-news-button">
+                  <span>18.4.2019.</span>
+                  Digitalno Junior ljeto.
+                </div>
               </div>
             </div>
           </a>
