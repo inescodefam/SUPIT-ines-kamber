@@ -65,10 +65,11 @@ footer {
   display: flex;
   align-items: center;
   color: var(--apricot-color);
+  transition: color 0.3s ease;
 }
 
 #about-us-nav a:hover {
-  color: var(--apricot-color-opacity);
+  color: var(--apricot-color-dark);
 }
 
 @media screen and (max-width: 768px) {
@@ -87,10 +88,6 @@ footer {
 
   .nav button img {
     scale: 0.8;
-  }
-
-  header .btn {
-    padding: 0.5em 0em;
   }
 
   #about-us-nav a {

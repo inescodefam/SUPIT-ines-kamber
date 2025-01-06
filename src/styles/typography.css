@@ -5,9 +5,8 @@
   --white-color: rgb(255, 255, 255);
   --black-color: rgb(0, 0, 0);
   --apricot-color: rgb(234, 196, 82);
-  --appricot-color-opacity: rgba(234, 196, 82, 0.5);
+  --apricot-color-dark: rgb(122, 98, 24);
   --button-shadow: rgb(0, 0, 0) 0px 0px 10px;
-  --title-border-bottom: 0.25em solid rgb(234, 196, 82);
 
   /* Text sizes */
   --typo-size-80: 80px;
@@ -18,7 +17,7 @@
 }
 
 .title {
-  border-bottom: var(--title-border-bottom);
+  border-bottom: 0.25em solid var(--apricot-color);
 }
 
 .red-text {
@@ -55,7 +54,7 @@
   font-size: var(--typo-size-24);
   display: flex;
   justify-content: center;
-  margin: 0 200px;
+  margin: 20px 200px;
 }
 
 .typo-news-button {
@@ -78,7 +77,7 @@
 
   .text-style {
     font-size: var(--typo-size-18);
-    margin: 0 30px;
+    margin: 10px 30px;
   }
 
   .typo-news-button {

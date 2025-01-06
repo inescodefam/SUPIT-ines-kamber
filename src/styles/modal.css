@@ -1,3 +1,20 @@
 .form-labels {
   font-weight: 600;
 }
+
+.modal-footer {
+  justify-content: start;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-title {
+    font-size: 24px;
+  }
+  .form-labels {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px;
+  }
+}
