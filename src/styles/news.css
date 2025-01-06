@@ -65,7 +65,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px auto;
+  margin: 20px 200px;
   gap: 10px;
 }
 
@@ -102,5 +102,17 @@
 
   .news-text {
     margin: 20px 30px;
+  }
+
+  .gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    gap: 10px;
+  }
+
+  .gallery-wrapper img {
+    width: 400px;
   }
 }
