@@ -41,6 +41,14 @@ footer {
   color: var(--apricot-color);
 }
 
+#constact-modal-btn {
+  color: var(--white-color);
+}
+
+#constact-modal-btn:hover {
+  color: var(--apricot-color);
+}
+
 /* Ikonice */
 .nav a img {
   transform: translate(0, -2.5px);
