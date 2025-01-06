@@ -41,11 +41,11 @@ footer {
   color: var(--apricot-color);
 }
 
-#constact-modal-btn {
+#contact-modal-btn {
   color: var(--white-color);
 }
 
-#constact-modal-btn:hover {
+#contact-modal-btn:hover {
   color: var(--apricot-color);
 }
 
