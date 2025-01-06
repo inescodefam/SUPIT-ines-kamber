@@ -1,14 +1,24 @@
 :root {
-  --mobile-only: 480px;
-  --tablet-only: 768px;
-  --footer-text-size: 80px;
-  --footer-text-color: rgb(240, 248, 255);
-  --footer-text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  --footer-red-text-color: rgb(220, 20, 60);
-  --typo-news-button-font-size: 16px;
-  --typo-news-button-font-size-mobile: 14px;
-  --button-color-white: rgb(255, 255, 255);
+  /* Colors */
+  --text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  --red-color: rgb(220, 20, 60);
+  --color-white: rgb(255, 255, 255);
   --button-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  --title-border-bottom: 0.25em solid rgb(234, 196, 82);
+
+  /* Text sizes */
+  --typo-size-80: 80px;
+  --typo-size-24: 24px;
+  --typo-size-14: 14px;
+  --typo-size-16: 16px;
+}
+
+.title {
+  border-bottom: var(--title-border-bottom);
+}
+
+.red-text {
+  color: var(--red-color);
 }
 
 .barlow-condensed-regular {
@@ -25,29 +35,54 @@
 }
 
 .footer-text {
-  font-size: 80px;
-  color: var(--footer-text-color);
+  color: var(--color-white);
+  font-size: var(--typo-size-80);
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  text-shadow: 0 0 5px var(--footer-text-shadow);
+  text-shadow: var(--text-shadow);
 }
 
 .footer-red-text {
-  color: var(--footer-red-text-color);
+  color: var(--red-color);
+}
+
+.text-style {
+  font-size: var(--typo-size-24);
+  display: flex;
+  justify-content: center;
+  margin: 0 15vw;
+  padding: ;
 }
 
 .typo-news-button {
-  font-size: 16px;
+  font-size: var(--typo-size-16);
   text-align: center;
   text-wrap: wrap;
-  color: var(--button-color-white);
+  color: var(--color-white);
   font-weight: bold;
   text-shadow: var(--button-shadow);
 }
 
-@media screen and (max-width: var(--mobile-only)) {
+.typo-news-content {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-text {
+    font-size: var(--typo-size-24);
+  }
+
+  .text-style {
+    font-size: 1.5em;
+    margin: 0 3vw;
+  }
+
   .typo-news-button {
-    font-size: var(--typo-news-button-font-size-mobile);
+    font-size: var(--typo-size-14);
+  }
+
+  .typo-news-content {
+    font-size: 18px;
   }
 }
