@@ -57,7 +57,7 @@
 }
 
 .news-text {
-  margin: 5vw 15vw;
+  margin: 30px 200px;
   text-align: justify;
 }
 
@@ -79,5 +79,9 @@
   .overlay {
     width: 250px;
     height: 250px;
+  }
+
+  .news-text {
+    margin: 20px 30px;
   }
 }
