@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  --text-shadow: 0 0 5px rgba(0, 0, 0, 0.925);
   --red-color: rgb(220, 20, 60);
   --white-color: rgb(255, 255, 255);
   --black-color: rgb(0, 0, 0);
@@ -10,6 +10,8 @@
 
   /* Text sizes */
   --typo-size-80: 80px;
+  --typo-size-60: 60px;
+  --typo-size-40: 40px;
   --typo-size-24: 24px;
   --typo-size-18: 18px;
   --typo-size-14: 14px;
@@ -24,9 +26,16 @@
   color: var(--red-color);
 }
 
+.banner-text {
+  font-size: var(--typo-size-60);
+  color: var(--white-color);
+  font-weight: 600;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
 .barlow-condensed-regular {
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -72,6 +81,12 @@
 }
 
 @media screen and (max-width: 480px) {
+  .banner-text {
+    font-size: var(--typo-size-40);
+    color: var(--white-color);
+    font-weight: 400;
+  }
+
   .footer-text {
     font-size: var(--typo-size-24);
   }

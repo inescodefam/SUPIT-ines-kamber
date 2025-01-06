@@ -69,6 +69,17 @@
   gap: 10px;
 }
 
+.banner-text {
+  position: absolute;
+  margin: auto;
+}
+
+.banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   .news-wrapper {
     display: flex;
