@@ -51,8 +51,8 @@
   font-size: var(--typo-size-24);
   display: flex;
   justify-content: center;
-  margin: 0 15vw;
-  padding: ;
+  margin: 0 200px;
+  padding: 32px;
 }
 
 .typo-news-button {
@@ -74,8 +74,8 @@
   }
 
   .text-style {
-    font-size: 1.5em;
-    margin: 0 3vw;
+    font-size: var(--typo-size-14);
+    margin: 0 20px;
   }
 
   .typo-news-button {
