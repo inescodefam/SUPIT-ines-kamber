@@ -61,6 +61,14 @@
   text-align: justify;
 }
 
+.gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .news-wrapper {
     display: flex;

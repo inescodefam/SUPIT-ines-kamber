@@ -53,7 +53,9 @@
 .text-style {
   font-size: var(--typo-size-24);
   text-align: center;
-  margin: 30px 200px;
+  margin: 30px 380px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .typo-news-button {
