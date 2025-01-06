@@ -8,9 +8,10 @@ body {
 
 main {
   min-height: max-content;
-  display: flex;
   flex-direction: column;
   position: relative;
+  display: flex;
+  height: 100%;
 }
 
 footer {
@@ -24,21 +25,22 @@ footer {
 
 .nav {
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  transition: top 0.3s ease-in-out;
   background-color: var(--black-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
   padding: 5px;
+  z-index: 100;
+  transition: top 3s ease-in-out;
 }
 
-body.scrolling-up .nav {
-  top: -60px;
+.nav-hide {
+  transform: translateY(-100%);
 }
 
 .navbar-content {
   display: flex;
   justify-content: space-between;
-  z-index: 100;
 }
 
 .navbar-content a {

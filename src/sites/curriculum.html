@@ -130,7 +130,70 @@
           </a>
         </div>
       </nav>
-      <!-- Modal -->
+    </header>
+    <main>
+      <div class="barlow-condensed-regular text-style title">
+        <h1>Nastavni plan</h1>
+      </div>
+
+      <div
+        class="row w-100 barlow-condensed-regular d-flex justify-content-center mt-3 mx-auto"
+      >
+        <div class="col-lg-5 col-sm-8">
+          <div class="mb-3">
+            <form id="curriculum-form">
+              <label for="subject-input" class="form-label"
+              >Naziv kolegija:</label
+              >
+              <input
+              type="text"
+              id="subject-input"
+              class="form-control flexdatalist"
+              placeholder="Upišite predmet"
+              data-min-length="1"
+              list="subjects-datalist"
+              required
+              />
+              <datalist id="subjects-datalist" role="listbox"></datalist>
+            </div>
+          </div>
+        </form>
+
+        <div class="col-lg-5 col-sm-8">
+          <table id="subject-details-table" class="table table-hover invisible">
+            <thead>
+              <tr class="border-0">
+                <th scope="col">Kolegij</th>
+                <th scope="col">ECTS</th>
+                <th scope="col">Sati</th>
+                <th scope="col">Predavanja</th>
+                <th scope="col">Vježbe</th>
+                <th scope="col">Tip</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr>
+                <th scope="col" class="text-end">Ukupno</th>
+                <th scope="col" id="ects"></th>
+                <th scope="col" id="sati"></th>
+                <th scope="col" id="predavanja"></th>
+                <th scope="col" id="vjezbe"></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-text footer-content">
+        <div>Budi izvrstan u onom što voliš.</div>
+        <div class="footer-red-text">Zaiskri.</div>
+      </div>
+    </footer>
+
+          <!-- Modal -->
       <div
         class="modal fade"
         id="kontakt-modal-id"
@@ -244,67 +307,5 @@
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="barlow-condensed-regular text-style title">
-        <h1>Nastavni plan</h1>
-      </div>
-
-      <div
-        class="row w-100 barlow-condensed-regular d-flex justify-content-center mt-3 mx-auto"
-      >
-        <div class="col-lg-5 col-sm-8">
-          <div class="mb-3">
-            <form id="curriculum-form">
-              <label for="subject-input" class="form-label"
-              >Naziv kolegija:</label
-              >
-              <input
-              type="text"
-              id="subject-input"
-              class="form-control flexdatalist"
-              placeholder="Upišite predmet"
-              data-min-length="1"
-              list="subjects-datalist"
-              required
-              />
-              <datalist id="subjects-datalist" role="listbox"></datalist>
-            </div>
-          </div>
-        </form>
-
-        <div class="col-lg-5 col-sm-8">
-          <table id="subject-details-table" class="table table-hover invisible">
-            <thead>
-              <tr class="border-0">
-                <th scope="col">Kolegij</th>
-                <th scope="col">ECTS</th>
-                <th scope="col">Sati</th>
-                <th scope="col">Predavanja</th>
-                <th scope="col">Vježbe</th>
-                <th scope="col">Tip</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-            <tfoot>
-              <tr>
-                <th scope="col" class="text-end">Ukupno</th>
-                <th scope="col" id="ects"></th>
-                <th scope="col" id="sati"></th>
-                <th scope="col" id="predavanja"></th>
-                <th scope="col" id="vjezbe"></th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-text footer-content">
-        <div>Budi izvrstan u onom što voliš.</div>
-        <div class="footer-red-text">Zaiskri.</div>
-      </div>
-    </footer>
   </body>
 </html>

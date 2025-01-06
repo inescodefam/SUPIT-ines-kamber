@@ -114,116 +114,6 @@
           </a>
         </div>
       </nav>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="kontakt-modal-id"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <img
-                src="./../../public/assets/contact-us-modal-icon.svg"
-                alt="Kontaktiraj nas"
-              />
-              <h1 class="modal-title fs-2" id="staticBackdropLabel">
-                Kontaktirajte nas
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <!-- Inputi modala -->
-            <div class="modal-body form-labels">
-              <form
-                action="https://www.fulek.com/mvc/supit/project-contact-form"
-                method="post"
-              >
-                <div class="mt-1 mb-1">
-                  <label for="fullname">Puno ime</label>
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    id="fullname"
-                    name="FullName"
-                    class="form-control"
-                    required
-                  />
-                </div>
-                <div class="mt-3 mb-1">
-                  <label for="email">E-mail</label>
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    id="email"
-                    name="Email"
-                    class="form-control"
-                    required
-                  />
-                </div>
-
-                <div class="mt-3 mb-1">
-                  <label for="importance">Važnost poruke</label>
-                </div>
-                <div>
-                  <select
-                    type="list"
-                    id="importance"
-                    name="Importance"
-                    class="form-control"
-                  >
-                    <option value="1">Visoka</option>
-                    <option value="2">Srednja</option>
-                    <option value="3">Niska</option>
-                  </select>
-                </div>
-                <div class="mt-3 mb-1">
-                  <label for="message">Poruka</label>
-                </div>
-                <div>
-                  <textarea
-                    id="message"
-                    name="Message"
-                    rows="6"
-                    class="form-control"
-                    required
-                  ></textarea>
-                </div>
-                <div class="mt-3 mb-1">
-                  <label for="newsletter">Želim primati obavijesti</label>
-
-                  <input
-                    type="checkbox"
-                    id="newsletter"
-                    name="ReceiveNewsletter"
-                  />
-                </div>
-                <!-- Gumbi modala footer -->
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Pošalji</button>
-                  <button
-                    type="button"
-                    class="btn btn-danger"
-                    data-bs-dismiss="modal"
-                  >
-                    Odustani
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
 
     <main>
@@ -264,5 +154,116 @@
         <div class="footer-red-text">Zaiskri.</div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="kontakt-modal-id"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              src="./../../public/assets/contact-us-modal-icon.svg"
+              alt="Kontaktiraj nas"
+            />
+            <h1 class="modal-title fs-2" id="staticBackdropLabel">
+              Kontaktirajte nas
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- Inputi modala -->
+          <div class="modal-body form-labels">
+            <form
+              action="https://www.fulek.com/mvc/supit/project-contact-form"
+              method="post"
+            >
+              <div class="mt-1 mb-1">
+                <label for="fullname">Puno ime</label>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="FullName"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="mt-3 mb-1">
+                <label for="email">E-mail</label>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="mt-3 mb-1">
+                <label for="importance">Važnost poruke</label>
+              </div>
+              <div>
+                <select
+                  type="list"
+                  id="importance"
+                  name="Importance"
+                  class="form-control"
+                >
+                  <option value="1">Visoka</option>
+                  <option value="2">Srednja</option>
+                  <option value="3">Niska</option>
+                </select>
+              </div>
+              <div class="mt-3 mb-1">
+                <label for="message">Poruka</label>
+              </div>
+              <div>
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="6"
+                  class="form-control"
+                  required
+                ></textarea>
+              </div>
+              <div class="mt-3 mb-1">
+                <label for="newsletter">Želim primati obavijesti</label>
+
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="ReceiveNewsletter"
+                />
+              </div>
+              <!-- Gumbi modala footer -->
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Pošalji</button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Odustani
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
