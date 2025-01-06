@@ -1,6 +1,5 @@
 html,
-body,
-main {
+body {
   min-height: max-content;
   margin: 0;
   padding: 0;
@@ -8,8 +7,10 @@ main {
 }
 
 main {
+  min-height: max-content;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 footer {
@@ -22,7 +23,7 @@ footer {
 }
 
 .nav {
-  background-color: #000;
+  background-color: var(--black-color);
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -30,14 +31,14 @@ footer {
 }
 
 .nav a {
-  color: #f8f9fa;
+  color: var(--white-color);
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0.5em;
 }
 
 .nav a:hover {
-  color: #eac452;
+  color: var(--apricot-color);
 }
 
 /* Ikonice */
@@ -51,31 +52,15 @@ footer {
   transform: translate(0, 1px);
 }
 
-/* Gumb za kontakte */
-header .btn {
-  color: #f8f9fa;
-  border: none;
-}
-
-header .btn:hover {
-  color: #eac452;
-}
-
-header button div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Dodatna navigacija na O nama stanici */
 #about-us-nav a {
   display: flex;
   align-items: center;
-  color: #eac452;
+  color: var(--apricot-color);
 }
 
 #about-us-nav a:hover {
-  color: yellow;
+  color: var(--apricot-color-opacity);
 }
 
 @media screen and (max-width: 768px) {
