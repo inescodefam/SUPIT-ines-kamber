@@ -1,12 +1,13 @@
 :root {
   /* Colors */
-  --text-shadow: 0 0 5px rgba(0, 0, 0, 0.925);
   --red-color: rgb(220, 20, 60);
   --white-color: rgb(255, 255, 255);
   --black-color: rgb(0, 0, 0);
   --apricot-color: rgb(234, 196, 82);
   --apricot-color-dark: rgb(122, 98, 24);
+
   --button-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  --text-shadow: 2px 2px 0px rgb(0, 0, 0);
 
   /* Text sizes */
   --typo-size-80: 80px;
@@ -51,17 +52,21 @@
   font-style: normal;
 }
 
-.footer-text {
+.text-80 {
+  color: var(--white-color);
+  font-size: var(--typo-size-80);
+  text-align: left;
+  font-weight: 600;
+  text-shadow: var(--text-shadow);
+}
+
+.text-80-uppercase {
   color: var(--white-color);
   font-size: var(--typo-size-80);
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
   text-shadow: var(--text-shadow);
-}
-
-.footer-red-text {
-  color: var(--red-color);
 }
 
 .text-style {
@@ -97,7 +102,7 @@
     font-size: var(--typo-size-14);
   }
 
-  .footer-text {
+  .text-80-uppercase {
     font-size: var(--typo-size-24);
   }
 

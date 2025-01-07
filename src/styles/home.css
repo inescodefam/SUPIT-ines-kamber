@@ -1,24 +1,16 @@
+main {
+  margin-top: 0px;
+}
+
 #home-title-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3em;
-  text-shadow: 2px 2px 0px rgb(0, 0, 0);
 }
 
-#home-title {
-  color: aliceblue;
-}
-
-#home-subtitle {
-  text-transform: uppercase;
-}
-
-.text-cursor {
-  display: inline-block;
-  width: 30px;
-  height: 1.2em;
-  background-color: #fff;
-  transform: translateY(0.2em);
+#myVideo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

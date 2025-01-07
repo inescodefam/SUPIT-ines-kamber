@@ -1,48 +1,24 @@
-const LETTER_APPEARANCE_DELAY = 100;
-const homeSubtitleText = "Zaiskri.";
-const homeTitleText = "Budi izvrstan u onom što voliš.";
-
-function createCursor() {
-  const cursorElement = document.createElement("span");
-  cursorElement.classList.add("text-cursor", "blink-animation");
-
-  return cursorElement;
+function homeAnimation() {
+  new TypeIt("#home-title", {
+    speed: 75,
+    startDelay: 900,
+    lifeLike: true,
+  })
+    .type("<span class=''>Budi izvrstan u onom što vidiš.</span>", {
+      delay: 200,
+    })
+    .delete(5)
+    .type("oliš.", { delay: 100 })
+    .break({ delay: 600 })
+    .type(
+      "<span style='text-transform:uppercase' class='red-text'>Zaiskri. </span>",
+      {
+        delay: 100,
+      }
+    )
+    .go();
 }
 
-function animateTitle() {
-  const homeTitleElement = document.getElementById("home-title");
-  const cursorElement = createCursor();
-  homeTitleElement.appendChild(cursorElement);
-
-  homeTitleText.split("").forEach((letter, index) => {
-    setTimeout(() => {
-      const span = document.createElement("span");
-      span.innerText = letter;
-      homeTitleElement.insertBefore(span, cursorElement);
-    }, index * LETTER_APPEARANCE_DELAY);
-  });
-  setTimeout(() => {
-    cursorElement.remove();
-  }, homeTitleText.length * LETTER_APPEARANCE_DELAY);
-}
-
-function animateSubtitle() {
-  const animationDelay = LETTER_APPEARANCE_DELAY * homeTitleText.length;
-  const homeSubtitleElement = document.getElementById("home-subtitle");
-  const cursorElement = createCursor();
-
-  setTimeout(() => {
-    homeSubtitleElement.appendChild(cursorElement);
-    homeSubtitleText.split("").forEach((letter, index) => {
-      setTimeout(() => {
-        const span = document.createElement("span");
-        span.innerText = letter;
-        homeSubtitleElement.insertBefore(span, cursorElement);
-      }, index * LETTER_APPEARANCE_DELAY);
-    });
-  }, animationDelay);
-}
 document.addEventListener("DOMContentLoaded", () => {
-  animateTitle();
-  animateSubtitle();
+  homeAnimation();
 });
