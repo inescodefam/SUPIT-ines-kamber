@@ -106,6 +106,10 @@
     font-size: var(--typo-size-24);
   }
 
+  .text-80 {
+    font-size: var(--typo-size-60);
+  }
+
   .text-style {
     font-size: var(--typo-size-18);
     margin: 20px 30px;

@@ -4,7 +4,7 @@ function homeAnimation() {
     startDelay: 900,
     lifeLike: true,
   })
-    .type("<span class=''>Budi izvrstan u onom što vidiš.</span>", {
+    .type("Budi izvrstan u onom što vidiš.", {
       delay: 200,
     })
     .delete(5)
