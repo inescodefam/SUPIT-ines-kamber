@@ -31,7 +31,7 @@ footer {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 0px;
+  padding: 16px;
   z-index: 100;
   transition: transform 0.5s ease-in-out;
 }
@@ -43,6 +43,7 @@ footer {
 .navbar-content {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .navbar-content a {
