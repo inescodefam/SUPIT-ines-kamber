@@ -1,4 +1,4 @@
-@keyframes slide-nav-bar {
+@keyframes slide-in {
   from {
     transform: translateX(100%);
     opacity: 0;
@@ -10,7 +10,7 @@
 }
 
 .slide-animation {
-  animation: slide-nav-bar 2s ease;
+  animation: slide-in 1s ease;
 }
 
 @keyframes bannerSlideIn {
