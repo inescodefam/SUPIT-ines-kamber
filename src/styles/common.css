@@ -19,14 +19,12 @@ main {
   min-height: max-content;
   position: relative;
   height: max-content;
-  margin-top: 50px;
 }
 
 footer {
   margin: 0;
   padding: 0;
   bottom: 0;
-
   width: 100%;
   max-height: max-content;
 }
