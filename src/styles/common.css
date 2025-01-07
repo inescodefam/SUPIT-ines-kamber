@@ -101,12 +101,6 @@ footer {
   color: var(--apricot-color-dark);
 }
 
-/* Mobile only and desctop only*/
-
-.mobile-only {
-  display: none;
-}
-
 .desktop-only {
   display: block;
 }
@@ -124,16 +118,8 @@ footer {
     padding: 8px 4px;
   }
 
-  .navbar-content a img {
-    scale: 0.7;
-  }
-
   #about-us-nav a {
     padding: 8px;
-  }
-
-  .mobile-only {
-    display: block;
   }
 
   .desktop-only {
