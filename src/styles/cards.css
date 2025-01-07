@@ -67,32 +67,46 @@
   margin: 0.25em 1em;
 }
 
+.flex-in-cell-of-two-col-grid p {
+  padding-left: 40px;
+}
+
 @media (max-width: 1000px) {
   .card-two-col {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    margin: 3em 0em;
+    gap: 8px;
+    margin: 24px 0px;
   }
   .card-four-col {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 32px auto;
+  }
+
+  .certificate-labels {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .certificate-rows {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-    flex: auto;
-    overflow: hidden;
+    height: 65px;
   }
   .certificate-rows img {
-    padding: 0;
     transform: translateX(-0%);
-    margin: 10px;
+    margin: 5px;
+    padding: 0px;
+    max-height: 55px;
+    object-fit: contain;
   }
 
   .cards {
