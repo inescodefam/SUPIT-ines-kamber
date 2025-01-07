@@ -33,6 +33,7 @@
   gap: 1rem;
   margin: 3rem;
   padding: 0 5vw;
+  place-content: center;
 }
 
 .card-four-col h4 {
@@ -47,7 +48,7 @@
   justify-content: center;
   width: 10vw;
   height: auto;
-  padding: 1em;
+  padding: 16px;
   transform: translateX(50%);
 }
 
@@ -86,10 +87,12 @@
     justify-content: space-between;
     align-items: center;
     flex: auto;
-    margin: 16px;
+    overflow: hidden;
   }
   .certificate-rows img {
     padding: 0;
+    transform: translateX(-0%);
+    margin: 10px;
   }
 
   .cards {
