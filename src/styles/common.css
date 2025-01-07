@@ -47,9 +47,15 @@ footer {
 }
 
 .navbar-content a {
+  display: flex;
+  align-items: center;
   color: var(--white-color);
   text-decoration: none;
   transition: color 0.3s ease;
+}
+
+.navbar-content img {
+  margin-right: 5px;
 }
 
 .navbar-content a:hover {
