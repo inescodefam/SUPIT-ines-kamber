@@ -2,9 +2,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-.container {
+.container-login {
   width: 400px;
-  margin: 6em auto;
+  margin: 36px auto;
 }
 
 #form-title {
