@@ -9,16 +9,11 @@
   height: 400px;
   object-fit: cover;
   object-position: 60%;
-  box-shadow: rgb(78, 78, 78) 0px 0px 10px;
-}
-
-.container :hover {
-  transition: scale(1.05) 0.5s ease-in-out;
 }
 
 .overlay:hover {
-  box-shadow: rgb(78, 78, 78) 0px 0px 50px;
-  transition: scale(1.05) 0.5s ease-in-out;
+  transform: scale(1.01);
+  box-shadow: rgb(78, 78, 78) 0px 0px 15px;
 }
 
 .overlay {
@@ -31,6 +26,8 @@
   height: 400px;
   border: 15px solid #f3f0f0;
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgb(78, 78, 78) 0px 0px 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .antique-bg {
