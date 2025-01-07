@@ -13,7 +13,7 @@ main {
   flex-direction: column;
   position: relative;
   height: 100%;
-  margin-top: 47px;
+  margin-top: 50px;
 }
 
 footer {
@@ -49,12 +49,14 @@ footer {
 .navbar-content a {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--white-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar-content img {
+  margin-top: 5px;
   margin-right: 5px;
 }
 
@@ -105,8 +107,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar-content {
-    transform: scale(0.8);
+  main {
+    margin-top: 60px;
+  }
+
+  .nav {
+    justify-content: space-evenly;
   }
 
   .navbar-content a {
