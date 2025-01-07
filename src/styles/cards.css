@@ -66,27 +66,7 @@
   margin: 0.25em 1em;
 }
 
-@media (max-width: 768px) {
-  .card-two-col {
-    width: 90%;
-  }
-  .card-four-col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 3rem;
-    padding: 0 5vw;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 3rem;
-    padding: 0 5vw;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .card-two-col {
     width: 100%;
     display: grid;
@@ -95,20 +75,31 @@
     margin: 3em 0em;
   }
   .card-four-col {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
 
-  .card-four-col img {
+  .certificate-rows {
     display: flex;
-    justify-content: center;
-    width: 60vw;
-    height: auto;
-    margin: auto;
-    transform: translateX(0%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: auto;
+    margin: 16px;
   }
+  .certificate-rows img {
+    padding: 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 3rem;
+    padding: 0 5vw;
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

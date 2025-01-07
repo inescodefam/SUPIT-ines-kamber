@@ -20,6 +20,11 @@
 
 .title {
   border-bottom: 0.25em solid var(--apricot-color);
+  width: 1000px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 30px;
+  position: relative;
 }
 
 .red-text {
@@ -62,9 +67,7 @@
 .text-style {
   font-size: var(--typo-size-24);
   text-align: center;
-  margin: 30px 380px;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
+  margin: 50px;
 }
 
 .typo-news-button {
@@ -80,11 +83,18 @@
   font-size: var(--typo-size-24);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
+  .title {
+    width: 320px;
+  }
   .banner-text {
     font-size: var(--typo-size-40);
     color: var(--white-color);
     font-weight: 400;
+  }
+
+  .certificates-labels h4 {
+    font-size: var(--typo-size-14);
   }
 
   .footer-text {

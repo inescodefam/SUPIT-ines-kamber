@@ -1,25 +1,24 @@
 .map {
   display: flex;
-  position: absolute;
+  position: relative;
   bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
   justify-content: center;
   align-items: center;
-  width: 80%;
+
   max-width: 1600px;
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .map {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .map {
-    width: 80%;
-    margin: 1em 0em;
+    width: 50%;
   }
 }
