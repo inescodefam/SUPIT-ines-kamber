@@ -1,4 +1,5 @@
 :root {
+  --ti-cursor-font-weight: 900;
   /* Colors */
   --red-color: rgb(220, 20, 60);
   --white-color: rgb(255, 255, 255);
