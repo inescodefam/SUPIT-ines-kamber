@@ -66,6 +66,16 @@
   gap: 10px;
 }
 
+.gallery-wrapper img {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-wrapper img:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .banner-text {
   position: absolute;
   margin: auto;
