@@ -63,6 +63,8 @@ footer {
 .navbar-content img {
   margin-top: 5px;
   margin-right: 5px;
+  width: 24px;
+  height: 24px;
 }
 
 .navbar-content a:hover {
@@ -79,13 +81,11 @@ footer {
 
 /* Ikonice */
 .navbar-content a img {
-  transform: translate(0, -2.5px);
-  scale: 0.8;
+  transform: translate(0, -2.5px) scale(0.8);
 }
 
 .navbar-content button img {
-  scale: 0.9;
-  transform: translate(0, 1px);
+  transform: translate(0, 1px) scale(0.9);
 }
 
 /* Dodatna navigacija na O nama stanici */
