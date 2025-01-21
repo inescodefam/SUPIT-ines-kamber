@@ -3,6 +3,7 @@
 }
 
 .modal-footer {
+  display: flex;
   justify-content: start;
 }
 
