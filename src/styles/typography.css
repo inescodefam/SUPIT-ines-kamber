@@ -9,6 +9,8 @@
 
   --button-shadow: rgb(0, 0, 0) 0px 0px 10px;
   --text-shadow: 2px 2px 0px rgb(0, 0, 0);
+  --news-box-shadow-hover: rgb(78, 78, 78) 0px 0px 15px;
+  --news-box-shadow: rgb(78, 78, 78) 0px 0px 10px;
 
   /* Text sizes */
   --typo-size-80: 80px;
