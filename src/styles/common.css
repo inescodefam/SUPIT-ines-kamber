@@ -90,10 +90,12 @@ footer {
 }
 
 /* Dodatna navigacija na O nama stanici */
-
-#about-us-nav a {
+#about-us-nav {
   display: flex;
   align-items: center;
+}
+
+#about-us-nav a {
   color: var(--apricot-color);
   transition: color 0.3s ease;
 }

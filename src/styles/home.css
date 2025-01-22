@@ -14,3 +14,23 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.cursor {
+  display: inline;
+  width: 1px;
+  height: 1em;
+  border-right: 30px solid var(--white-color);
+  box-shadow: var(--text-shadow);
+  background: transparent;
+  animation: blink 0.5s step-start infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navbars = document.querySelectorAll("nav");
-  let lastScrollTop = 0;
+  const navbar = document.querySelectorAll("nav")[0];
+  let lastScroll = 0;
   window.addEventListener("scroll", function () {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    navbars.forEach((navbar) => {
-      if (scrollTop > lastScrollTop) {
-        navbar.classList.add("nav-hide");
-      } else {
-        navbar.classList.remove("nav-hide");
-      }
-    });
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    let scrollTop = window.scrollY;
+    if (scrollTop > lastScroll) {
+      navbar.classList.add("nav-hide");
+    } else {
+      navbar.classList.remove("nav-hide");
+    }
+    lastScroll = scrollTop == 0 ? 0 : scrollTop;
   });
 });
