@@ -25,7 +25,7 @@ function getAllSubjects() {
 }
 
 function displaySubjects(subjects) {
-  const subjectsDatalist = document.getElementById("subjects-datalist");
+  const $subjectsDatalist = $("#subjects-datalist");
 
   if (!Array.isArray(subjects)) {
     console.error("Expected an array but got:", subjects);
@@ -33,13 +33,13 @@ function displaySubjects(subjects) {
   }
 
   subjects.forEach((subject) => {
-    const option = document.createElement("option");
-    option.value = subject.kolegij;
-    option.id = subject.id;
+    const option = $("<option></option>")
+      .val(subject.kolegij)
+      .attr("id", subject.id);
 
     findSubjectInTable(subject.kolegij)
-      ? subjectsDatalist.children[0].remove()
-      : subjectsDatalist.appendChild(option);
+      ? $subjectsDatalist.children().first().remove()
+      : $subjectsDatalist.append(option);
   });
 }
 
