@@ -1,3 +1,20 @@
+.cursor {
+  display: inline;
+  font-weight: bold;
+  color: var(--white-color);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 @keyframes slide-in {
   from {
     transform: translateX(100%);

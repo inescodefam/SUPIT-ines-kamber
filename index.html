@@ -29,11 +29,15 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="src/scripts/home.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Local scripts -->
+    <script src="src/scripts/home.js" defer></script>
     <script src="src/scripts/auth.js"></script>
     <script src="src/scripts/private-route.js"></script>
     <script src="src/scripts/common.js"></script>
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
     <!-- linkovi na stylesheet-->
     <link rel="stylesheet" href="./src/styles/typography.css" />
@@ -121,7 +125,8 @@
           <source src="./public/assets/typingOnlaptop.mp4" type="video/mp4" />
         </video>
         <div id="home-title-container" class="barlow-condensed-regular text-80">
-          <p id="home-title"></p>
+          <p id="home-title"><span class="cursor"></span></p>
+          <p id="home-subtitle"><span class="cursor"></span></p>
         </div>
       </div>
     </main>
