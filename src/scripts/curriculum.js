@@ -136,7 +136,7 @@ function displaySubjectDetailsInTable(subject) {
   }
 }
 
-$(document).ready(async function () {
+$().ready(async function () {
   const subjects = await getAllSubjects();
   displaySubjects(subjects);
 
