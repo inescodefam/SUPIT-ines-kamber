@@ -15,6 +15,7 @@ main {
   transform: translate(-50%, -50%);
 }
 
+/* Typing animation css */
 .cursor {
   display: inline;
   width: 1px;
