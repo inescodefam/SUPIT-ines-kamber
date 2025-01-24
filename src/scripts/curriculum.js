@@ -24,17 +24,15 @@ async function getAllSubjects() {
 }
 
 function displaySubjects(subjects) {
-  const $subjectsDatalist = $("#subjects-datalist");
-
   if (!Array.isArray(subjects)) {
     console.error("Expected an array but got:", subjects);
     return;
   }
 
+  const $subjectsDatalist = $("#subjects-datalist");
+
   subjects.forEach((subject) => {
-    const option = $("<option></option>")
-      .val(subject.kolegij)
-      .attr("id", subject.id);
+    const option = $("<option></option>").val(subject.kolegij);
 
     findSubjectInTable(subject.kolegij)
       ? $subjectsDatalist.children().first().remove()
@@ -45,8 +43,8 @@ function displaySubjects(subjects) {
 /*    Table     */
 
 function findSubjectInTable(subjectName) {
-  const tableBody = document.querySelector("tbody");
   if (!tableBody) return false;
+  const tableBody = document.querySelector("tbody");
 
   const tableRows = tableBody.querySelectorAll("tr");
   return Array.from(tableRows).some(
