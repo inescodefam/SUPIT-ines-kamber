@@ -43,25 +43,25 @@ function displaySubjects(subjects) {
 /*    Table     */
 
 function findSubjectInTable(subjectName) {
-  if (!tableBody) return false;
-  const tableBody = document.querySelector("tbody");
+  const $tableBody = $("tbody");
+  if (!$tableBody) return false;
 
-  const tableRows = tableBody.querySelectorAll("tr");
-  return Array.from(tableRows).some(
-    (tableRow) => tableRow.children[0].innerText === subjectName
+  const $tableRows = $("tr");
+  return Array.from($tableRows).some(
+    ($tableRow) => $tableRow.children[0].innerText === subjectName
   );
 }
 
 function deleteSubjectButton(tableRow) {
-  const deleteButton = document.createElement("button");
-  deleteButton.type = "button";
-  deleteButton.classList.add("btn", "btn-danger", "btn-close", "mt-1");
-  deleteButton.addEventListener("click", function () {
-    tableRow.remove();
-    updateSubjectList();
-  });
+  const $deleteButton = $("<button></button>")
+    .attr("type", "button")
+    .addClass("btn btn-danger btn-close mt-1")
+    .on("click", function () {
+      $(tableRow).remove();
+      updateSubjectList();
+    });
 
-  return deleteButton;
+  return $deleteButton;
 }
 
 function calculateSumOfAllSubjects(subjects, key) {

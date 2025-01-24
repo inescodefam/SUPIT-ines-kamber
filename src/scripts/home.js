@@ -3,14 +3,10 @@ const DELETED = "idiš.";
 const TYPED = "oliš.";
 const SUBTITLE = "ZAISKRI.";
 
-const title = document.getElementById("home-title").querySelector(".text");
-const subtitle = document
-  .getElementById("home-subtitle")
-  .querySelector(".text");
-const cursor1 = document.getElementById("home-title").querySelector(".cursor");
-const cursor2 = document
-  .getElementById("home-subtitle")
-  .querySelector(".cursor");
+const title = document.querySelector("#home-title .text");
+const subtitle = document.querySelector("#home-subtitle .text");
+const cursor1 = document.querySelector("#home-title .cursor");
+const cursor2 = document.querySelector("#home-subtitle .cursor");
 
 var speed = Math.random() * 250;
 
