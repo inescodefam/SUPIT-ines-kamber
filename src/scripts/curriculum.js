@@ -2,11 +2,11 @@ const CURRICULUM_API = API_BASE + "/supit";
 
 /*  Data  */
 
-function getAllSubjects() {
+async function getAllSubjects() {
   const userToken = getUserFromLocalStorage()?.token;
 
   try {
-    return $.ajax({
+    const { isSuccess, data } = await $.ajax({
       url: CURRICULUM_API + "/curriculum-list/hr",
       method: "GET",
       headers: {
@@ -14,10 +14,9 @@ function getAllSubjects() {
         Authorization: `Bearer ${userToken}`,
       },
       dataType: "json",
-    }).then((response) => {
-      const { isSuccess, data } = response;
-      return isSuccess ? data : [];
     });
+
+    return isSuccess ? data : [];
   } catch (error) {
     console.error(error);
     return [];
@@ -138,6 +137,7 @@ function displaySubjectDetailsInTable(subject) {
 
 $().ready(async function () {
   const subjects = await getAllSubjects();
+
   displaySubjects(subjects);
 
   $("#subject-input").on("change", function () {
