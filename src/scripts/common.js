@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastScroll = 0;
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY;
-    if (scrollTop > 25) {
+    console.log({ scrollTop, lastScroll });
+    if (scrollTop > 200) {
       scrollTop > lastScroll
         ? navbar.classList.add("nav-hide")
         : navbar.classList.remove("nav-hide");
