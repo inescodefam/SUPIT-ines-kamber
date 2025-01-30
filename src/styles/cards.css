@@ -1,14 +1,13 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 16px;
   margin: 3rem;
   padding: 0 5vw;
 }
 
 .card {
   border-radius: 4px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .cards h4 {
