@@ -104,8 +104,13 @@ function addEventListenerToForm(elementId, submitHandler) {
 document.addEventListener("DOMContentLoaded", () => {
   const isLoginPage = window.location.pathname.endsWith("login.html");
   const isRegisterPage = window.location.pathname.endsWith("register.html");
+  const isCurriculumPage = window.location.pathname.endsWith("curriculum.html");
 
   if ((isLoginPage || isRegisterPage) && getUserFromLocalStorage()) {
+    redirectToHomePage();
+    return;
+  }
+  if (isCurriculumPage && getUserFromLocalStorage() === null) {
     redirectToHomePage();
     return;
   }
